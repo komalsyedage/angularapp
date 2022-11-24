@@ -1,0 +1,21 @@
+<label>{{name}}</label>
+<p class="server">server with Id {{serverId}} is {{getserverStatus()}}</p>
+<button  [disabled]="!allownewServer" (click)='onCeeateServer()'>Add server</button>
+<div>{{serverCreationStatus}}</div>
+
+<div>
+    Two way data binding
+
+</div>
+<input type="text" [(ngModel)]="serverName"> 
+{{serverName}}
+
+<br>
+<br>
+
+<div class="name">
+<h3 class="enter"> Enter User Name:<input type="text"  [(ngModel)]="nameLabel"></h3>
+<h4>User Name Is: {{nameLabel}}</h4>
+
+<input type="reset"> 
+</div>

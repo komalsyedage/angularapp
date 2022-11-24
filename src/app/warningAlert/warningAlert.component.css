@@ -1,0 +1,11 @@
+.this{
+    display: flexbox;
+    justify-items: center;
+  
+    background-color: rgb(245, 149, 167);
+    border: 3px solid #9b1e1e;
+ padding-left: 150px;
+    height: 80px;
+    width: 700px;
+
+}

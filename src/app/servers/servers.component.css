@@ -1,0 +1,18 @@
+.server{
+    font-size: x-large;
+    font-weight: 300;
+}
+.user{
+    font-family: sans-serif;
+    font-size: x-large;
+    font-weight: 300;
+    padding-top: 70px;
+}
+.name{
+    height: 170px;
+    width: 250px;
+    border: 1px solid;
+    background-color: aqua;
+    margin-top: 100px;
+   margin-left: 600px;
+}
