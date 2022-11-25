@@ -27,11 +27,7 @@ clear:string='clear'
   onCeeateServer(){
     this.serverCreationStatus='server created';
   }
-  submit(){
-    this.clear=''
-  }
-
-
+  
   ngOnInit() {
   }
 

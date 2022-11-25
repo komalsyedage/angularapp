@@ -9,6 +9,9 @@ import { successAlertComponent } from './warningAlert/successAlert/successAlert.
 
 import { ServersComponent } from './servers/servers.component';
 import { FormsModule } from '@angular/forms';
+import { DemodirectivesComponent } from './demodirectives/demodirectives.component';
+import { NgswitchComponent } from './ngswitch/ngswitch.component';
+import { NgifForSwitchComponent } from './ngif-for-switch/ngif-for-switch.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,6 +19,9 @@ import { FormsModule } from '@angular/forms';
     warningComponent,
     successAlertComponent,
     ServersComponent,
+    DemodirectivesComponent,
+    NgswitchComponent,
+    NgifForSwitchComponent,
    
     
   ],

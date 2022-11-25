@@ -9,10 +9,13 @@
     padding-top: 70px;
 }
 .name{
-    height: 170px;
-    width: 250px;
+    height: 200px;
+    width: 400px;
     border: 1px solid;
     background-color: aqua;
     margin-top: 100px;
    margin-left: 600px;
+}
+.enter input{
+    size: 100px;
 }
