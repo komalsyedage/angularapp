@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { DemodirectivesComponent } from './demodirectives/demodirectives.component';
 import { NgswitchComponent } from './ngswitch/ngswitch.component';
 import { NgifForSwitchComponent } from './ngif-for-switch/ngif-for-switch.component';
+import { PractiseComponent } from './practise/practise.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +23,7 @@ import { NgifForSwitchComponent } from './ngif-for-switch/ngif-for-switch.compon
     DemodirectivesComponent,
     NgswitchComponent,
     NgifForSwitchComponent,
+    PractiseComponent,
    
     
   ],
