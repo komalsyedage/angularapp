@@ -8,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 export class PractiseComponent implements OnInit {
 practise:string='Simple Data Binding';
 imagepath:string='assets/images/TypeScriptImage.jpeg';
-show:string="property binding"
-  constructor() { }
+show:string="property binding";
+display:string="Komal Dhone";
 
+
+
+  constructor() { }
+  click(){
+this.display=" "
+  }
+  
   ngOnInit() {
   }
 

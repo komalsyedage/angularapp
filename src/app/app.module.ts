@@ -30,7 +30,7 @@ import { PractiseComponent } from './practise/practise.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule   //form contron for two way databinding
     
 
   ],

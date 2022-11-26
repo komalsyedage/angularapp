@@ -1,3 +1,10 @@
 <h1>String Interpolattion Examples</h1>
 <h3>{{practise }}</h3><br>
-<img  class="image"  src="{{imagepath}}">
+<img  class="image"  src="{{imagepath}}"><br><hr>
+<h2>Two Way data Binding</h2>
+<div class="div">
+
+<div><h2>Enter User name:</h2><input type="text" [(ngModel)]="display"/></div>
+<h2> user Name is:{{display}}</h2><br>
+<button class="btn btn-primary" [disabled]="!display" (click)="click()"> Clear </button>
+</div>
