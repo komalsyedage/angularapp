@@ -1,4 +1,51 @@
-<h2>ngif-ngfor-ngswitch  Assignment</h2>
+<h2>Structural Directives  Assignment</h2>
+
+<div class="ng">
+<h2>1 . *ngIf statement </h2>
+<div class="cod" *ngIf="gettrue;else falseCondition">
+    <h2>You have selected: "CodemindTechnology"</h2></div>
+   
+    <ng-template #falseCondition>
+        You have selected:<h2>"False</h2>
+    </ng-template>
+    <h2>2 . *ngFor statement </h2>
+    <h3>The Name & Age Is</h3> 
+    <div class="cod">
+        <h3 *ngFor="let item of friendList">
+           
+      <h3>*name {{item.name}} age is {{item.age}} * </h3> 
+    
+    </h3>
+
+</div>
+<h2>3. ngSwitch statement</h2>
+<h3 class="cod">CodemindCourses</h3>
+<div class="container">
+    <div class="row">
+    <div class="col-md-4"><!--bootstrapp class form control-->
+        <select class="form-control" (change)="getProductValue($event)">
+            <div class="Default">select Courses</div>
+            <option value="Angular">Angular</option>
+            <option value=".NET">.NET</option>
+            <option value="Data Science">Data Science</option>
+            <option value="Java">Java</option>
+        </select>
+    </div>
+    <div class="col-md-12" [ngSwitch]="select"><!--[ngSwithch case ]=""-->
+       <h2 class="text-success" *ngSwitchDefault>Please Select Course</h2>
+       <h2 class="text-success" *ngSwitchCase="'Angular'">Angular</h2>
+       <h2 class="text-success"  *ngSwitchCase="'.NET'">.NET</h2>
+
+       <h2 class="text-success"  *ngSwitchCase="'Data Science'">Data Science</h2>
+       <h2 class="text-success"  *ngSwitchCase="'Java'">Java</h2>
 
 
-<button *ngIf="show"> yesss</button>
+
+    </div>
+    </div>
+</div>
+
+    
+</div>
+
+   

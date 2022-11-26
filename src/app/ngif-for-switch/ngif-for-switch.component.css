@@ -1,0 +1,18 @@
+.ng{
+    background-color: rgb(108, 108, 199);
+    height: 700px;
+    width: 700px;
+    
+   margin-left: 700px;
+
+}
+.cod {
+    background-color: rgb(126, 192, 192);
+    border: 1px solid back;
+}
+.form-control{
+    background-color:rgb(126, 192, 192);
+}
+.col-md-12{
+   background-color: black;
+}
