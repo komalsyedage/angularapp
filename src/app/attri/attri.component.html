@@ -1,0 +1,18 @@
+<div class="dive">
+<div [ngStyle]="{'color':colorVal , 'background-color':'#ddd'}">
+    Learning Angular *
+</div>
+<h4>Ng Class</h4>
+
+<ul *ngFor="let person of people">
+    <li [ngClass]="{
+        'text-success': person.country === 'UK',
+        'text-primary': person.country === 'USA',
+        'text-danger': person.country === 'HK'  }">
+ 
+     {{person.name}} ({{person.country}})
+    </li>
+</ul>
+</div>
+<h3>Normal Para</h3>
+<h2 appCustdir>custome para</h2>
