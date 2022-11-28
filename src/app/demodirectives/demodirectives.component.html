@@ -16,7 +16,9 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let movie of movies">  <!--for of loop-->
+            <tr *ngFor="let movie of movies ,let i=index" >
+                  <!--for of loop , next for index value-->
+                  {{i+1}}<!--index from 1 so do i+1 -->
                 <td>{{movie.title}}</td>
                 <td>{{movie.director}}</td>
                 <td>{{movie.cast}}</td>

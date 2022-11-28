@@ -13,6 +13,8 @@ import { DemodirectivesComponent } from './demodirectives/demodirectives.compone
 import { NgswitchComponent } from './ngswitch/ngswitch.component';
 import { NgifForSwitchComponent } from './ngif-for-switch/ngif-for-switch.component';
 import { PractiseComponent } from './practise/practise.component';
+import { AttriComponent } from './attri/attri.component';
+import { CustdirDirective } from './custdir.directive';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +26,8 @@ import { PractiseComponent } from './practise/practise.component';
     NgswitchComponent,
     NgifForSwitchComponent,
     PractiseComponent,
+    AttriComponent,
+    CustdirDirective,
    
     
   ],
