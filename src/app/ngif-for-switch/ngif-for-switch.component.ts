@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NgifForSwitchComponent implements OnInit {
   select:string;
+  display:string="Komal Dhone";
   constructor() { }
   
   getProductValue(value){
@@ -34,6 +35,9 @@ gettrue(){
 getfalse(){
   this.condition=false;
 }
+click(){
+  this.display=" "
+    }
   ngOnInit() {
   }
 
