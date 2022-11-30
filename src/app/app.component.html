@@ -1,5 +1,10 @@
-<!--The content below is only a placeholder and can be replaced.-->
+
 <h2> Welcome to {{ title }}!<hr></h2>
+<div *ngFor="let e of  Bank">
+<app-demo [bank]="e"></app-demo>
+</div>
+<!--<div  class="emp" >
+
 <app-attri></app-attri><hr>
 <div style="text-align:center">
   <h1>
@@ -15,7 +20,6 @@
 <app-servers></app-servers><hr>
 
 <button type="button" class="btn btn-primary">Primary</button><br><br><hr>
-<app-demodirectives></app-demodirectives><hr><br>
-<app-practise></app-practise>
-<router-outlet></router-outlet>
+
+<router-outlet></router-outlet>-->
 

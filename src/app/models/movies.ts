@@ -4,3 +4,4 @@ export class Movie {
     cast: string;
     releaseDate: string;
 }
+//in demo directive code use

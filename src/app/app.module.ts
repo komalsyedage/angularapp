@@ -12,9 +12,11 @@ import { FormsModule } from '@angular/forms';
 import { DemodirectivesComponent } from './demodirectives/demodirectives.component';
 import { NgswitchComponent } from './ngswitch/ngswitch.component';
 import { NgifForSwitchComponent } from './ngif-for-switch/ngif-for-switch.component';
-import { PractiseComponent } from './practise/practise.component';
+
 import { AttriComponent } from './attri/attri.component';
 import { CustdirDirective } from './custdir.directive';
+import { DemoComponent } from './demo/demo.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,9 +27,11 @@ import { CustdirDirective } from './custdir.directive';
     DemodirectivesComponent,
     NgswitchComponent,
     NgifForSwitchComponent,
-    PractiseComponent,
+  
     AttriComponent,
     CustdirDirective,
+    DemoComponent,
+   
    
     
   ],

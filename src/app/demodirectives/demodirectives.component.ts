@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { createInput } from '@angular/compiler/src/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Movie } from '../models/movies';
 
 @Component({
@@ -15,10 +16,15 @@ title : string = "Top 3 Movies";
     { title: 'Kantara', director: 'Rishab', cast: 'Rishab', releaseDate: '2022'},
     { title: 'KGF', director: 'RockBhai', cast:'Yash', releaseDate: '2019'}
   ]
+  //Child component
+ 
+ 
 
   constructor() { }
 
   ngOnInit() {
-  }
 
+   
+  }
+  
 }

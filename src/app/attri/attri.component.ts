@@ -5,8 +5,10 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './attri.component.html',
   styleUrls: ['./attri.component.css']
 })
+
 export class AttriComponent implements OnInit {
   colorVal:'blue';
+  uname;
   people:any[] = [
     {
       "name": "Jack",
@@ -30,9 +32,12 @@ export class AttriComponent implements OnInit {
     }
   ]
 
-  
   constructor() { }
-
+show(value){
+  this.uname=value;
+ 
+ 
+}
   ngOnInit() {
   }
 
