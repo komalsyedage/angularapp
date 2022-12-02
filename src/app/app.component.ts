@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
+
   title = 'angularapp';
   Bank:any=[{
     bankName:"SBI",
@@ -40,4 +41,11 @@ export class AppComponent {
     ename:'Divya',ecity:'Banglor',esalary:'60000'
   }
  ]
-}
+ item:any=[];
+ addItem(newItem:string){
+  this.item.push(newItem);
+ }
+ uid:any;// numer sir take
+ 
+ }
+

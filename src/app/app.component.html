@@ -1,8 +1,11 @@
 
 <h2> Welcome to {{ title }}!<hr></h2>
+<br>
+<!--<h4 class="hii">@Input Decorator Print Bank name, ID,Location</h4> 
 <div *ngFor="let e of  Bank">
 <app-demo [bank]="e"></app-demo>
-</div>
+</div>-->
+
 <!--<div  class="emp" >
 
 <app-attri></app-attri><hr>
@@ -18,8 +21,26 @@
 <app-warning></app-warning>
 <app-success></app-success><br><br><hr>
 <app-servers></app-servers><hr>
-
+</body>
 <button type="button" class="btn btn-primary">Primary</button><br><br><hr>
 
 <router-outlet></router-outlet>-->
+<app-attri></app-attri>
 
+<div class="new">
+<app-demo (newItemEvent)="addItem($event)"></app-demo>
+<ul>
+  <li *ngFor="let i of item">
+   <b> {{i}}</b>
+  </li>
+</ul>
+</div>
+<app-servers></app-servers>
+<div class="uid">
+<select (change)="uid = sid.value" #sid>
+<option selected disabled> no value select</option>
+<option  [value]="id" *ngFor="let id of [1,2,3,4]"></option>
+{{id}}
+</select>
+<app-hooks [userid]="uid"></app-hooks>
+</div>

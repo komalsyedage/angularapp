@@ -16,6 +16,7 @@ import { NgifForSwitchComponent } from './ngif-for-switch/ngif-for-switch.compon
 import { AttriComponent } from './attri/attri.component';
 import { CustdirDirective } from './custdir.directive';
 import { DemoComponent } from './demo/demo.component';
+import { HooksComponent } from './hooks/hooks.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { DemoComponent } from './demo/demo.component';
     AttriComponent,
     CustdirDirective,
     DemoComponent,
+    HooksComponent,
    
    
     
@@ -46,3 +48,4 @@ import { DemoComponent } from './demo/demo.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
