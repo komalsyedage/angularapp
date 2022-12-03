@@ -17,6 +17,9 @@ import { AttriComponent } from './attri/attri.component';
 import { CustdirDirective } from './custdir.directive';
 import { DemoComponent } from './demo/demo.component';
 import { HooksComponent } from './hooks/hooks.component';
+import { DirassignComponent } from './dirassign/dirassign.component';
+import { AddremoveComponent } from './addremove/addremove.component';
+import { ChildComponent } from './child/child.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +36,9 @@ import { HooksComponent } from './hooks/hooks.component';
     CustdirDirective,
     DemoComponent,
     HooksComponent,
+    DirassignComponent,
+    AddremoveComponent,
+    ChildComponent,
    
    
     

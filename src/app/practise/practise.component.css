@@ -1,0 +1,10 @@
+.image{
+    height: 300px;
+    width: 500px; 
+}
+.div{
+    background-color: cadetblue;
+    height: 260px;
+    width: 500px;
+    margin-left: 740px;
+}

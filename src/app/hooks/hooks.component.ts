@@ -7,6 +7,7 @@ import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/cor
 })
 export class HooksComponent implements OnInit ,OnChanges{
 @Input() userid:number;
+
   constructor() {
     console.log('Constructor Fisrt called');
     
@@ -26,4 +27,8 @@ export class HooksComponent implements OnInit ,OnChanges{
   ngOnInit() {
   }
 
+  
+
 }
+
+ 

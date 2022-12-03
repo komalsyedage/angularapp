@@ -1,0 +1,29 @@
+
+<h1>List</h1>
+<div class="divi">
+  <div class="container mt-5">
+<div class="row">
+<div class="col-md-12">
+<input  class="input-group mb-3" #myuser  placeholder="Enter Item">
+<button  type="button"  (click)="onclick(myuser)" >Add List</button>
+<table class="table table-light mt-3">
+  <thead class="thead-light">
+  <tr>
+    <th>Add Item</th>
+    <th>Delete Item</th>
+  </tr>
+</thead>
+  <tbody>
+    <tr *ngFor="let i of userlist">
+    <td>{{i}}</td>
+    <td>
+      <button  (click)="ondelete(userlist)"   type="button" class="btn btn-danger btn-lg">Delete Item</button>
+    </td>
+  </tr>
+   </tbody>
+</table>
+</div>
+</div>
+  </div>
+     
+</div>
