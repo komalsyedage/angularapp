@@ -20,6 +20,7 @@ import { HooksComponent } from './hooks/hooks.component';
 import { DirassignComponent } from './dirassign/dirassign.component';
 import { AddremoveComponent } from './addremove/addremove.component';
 import { ChildComponent } from './child/child.component';
+import { DatabindingComponent } from './databinding/databinding.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { ChildComponent } from './child/child.component';
     DirassignComponent,
     AddremoveComponent,
     ChildComponent,
+    DatabindingComponent,
    
    
     
