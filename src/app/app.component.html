@@ -25,9 +25,9 @@
 <app-success></app-success><br><br><hr>
 <app-servers></app-servers><hr>
 </body>
-<button type="button" class="btn btn-primary">Primary</button><br><br><hr>
+<button type="button" class="btn btn-primary">Primary</button><br><br><hr>-->
 
-<router-outlet></router-outlet>-->
+
 <app-attri></app-attri>
 
 <div class="new">
@@ -45,6 +45,15 @@
 <option  [value]="id" *ngFor="let id of [1,2,3,4]"></option>
 {{id}}
 </select>
-<app-hooks [userid]="uid"></app-hooks>
+<!--<app-hooks [userid]="uid">
+  <h1 #child>This is Child content comming from Parent</h1>
+</app-hooks>-->
 </div>
 <app-dirassign></app-dirassign>
+<select (change)="uid=sid.value" #sid>
+<option selected disabled>no value selected</option>
+<option [value]="" *ngFor="let id of [1,2,3,4]"></option>
+{{id}}
+</select>
+<app-hook-practise [userId]="uid"></app-hook-practise>
+<router-outlet></router-outlet>

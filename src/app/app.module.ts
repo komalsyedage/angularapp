@@ -21,6 +21,7 @@ import { DirassignComponent } from './dirassign/dirassign.component';
 import { AddremoveComponent } from './addremove/addremove.component';
 import { ChildComponent } from './child/child.component';
 import { DatabindingComponent } from './databinding/databinding.component';
+import { HookPractiseComponent } from './hook-practise/hook-practise.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { DatabindingComponent } from './databinding/databinding.component';
     AddremoveComponent,
     ChildComponent,
     DatabindingComponent,
+    HookPractiseComponent,
    
    
     

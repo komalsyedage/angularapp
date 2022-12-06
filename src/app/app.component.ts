@@ -45,7 +45,8 @@ export class AppComponent {
  addItem(newItem:string){
   this.item.push(newItem);
  }
- uid:any;// numer sir take
- 
+ //uid:any;// numer sir take
+ //demo="Hii Angular Developer";
+public uid:number;
  }
 
