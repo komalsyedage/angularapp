@@ -22,6 +22,7 @@ import { AddremoveComponent } from './addremove/addremove.component';
 import { ChildComponent } from './child/child.component';
 import { DatabindingComponent } from './databinding/databinding.component';
 import { HookPractiseComponent } from './hook-practise/hook-practise.component';
+import { SimpletemplateformComponent } from './simpletemplateform/simpletemplateform.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { HookPractiseComponent } from './hook-practise/hook-practise.component';
     ChildComponent,
     DatabindingComponent,
     HookPractiseComponent,
+    SimpletemplateformComponent,
    
    
     

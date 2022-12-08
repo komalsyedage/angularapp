@@ -28,7 +28,7 @@
 <button type="button" class="btn btn-primary">Primary</button><br><br><hr>-->
 
 
-<app-attri></app-attri>
+<!--<app-attri></app-attri>
 
 <div class="new">
 <app-demo (newItemEvent)="addItem($event)"></app-demo>
@@ -45,9 +45,9 @@
 <option  [value]="id" *ngFor="let id of [1,2,3,4]"></option>
 {{id}}
 </select>
-<!--<app-hooks [userid]="uid">
+<app-hooks [userid]="uid">
   <h1 #child>This is Child content comming from Parent</h1>
-</app-hooks>-->
+</app-hooks>
 </div>
 <app-dirassign></app-dirassign>
 <select (change)="uid=sid.value" #sid>
@@ -55,5 +55,8 @@
 <option [value]="" *ngFor="let id of [1,2,3,4]"></option>
 {{id}}
 </select>
-<app-hook-practise [userId]="uid"></app-hook-practise>
-<router-outlet></router-outlet>
+<app-hook-practise [userId]="uid">
+  <h1 #child>this is child conteent coming from parent component</h1>
+</app-hook-practise>
+<router-outlet></router-outlet>-->
+<app-simpletemplateform></app-simpletemplateform>

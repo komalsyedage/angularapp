@@ -11,13 +11,19 @@ export class HooksComponent implements OnInit ,OnChanges,DoCheck,AfterContentIni
   constructor() {
     console.log('Constructor Fisrt called');
     
-   }
+ }
+  ngOnChanges(changes: SimpleChanges): void {
+    throw new Error('Method not implemented.');
+  }
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
   ngAfterViewInit(): void {
     throw new Error('agafterviewinit called');
   }
   ngAfterContentChecked(): void {
   
-    console.log('ngafterchecked called');
+   console.log('ngafterchecked called');
     
   }
   ngDoCheck(): void {
@@ -26,21 +32,21 @@ export class HooksComponent implements OnInit ,OnChanges,DoCheck,AfterContentIni
   }
   ngAfterContentInit(): void {
     console.log('ngaftercontent  Called');
-  }
-  ngOnChanges(changes: SimpleChanges): void {
-    console.log('ngOnChanges Called second');
-    for(const propname in changes){
-      const prop=changes[propname];
-      const{previousValue,currentValue,firstChange}=prop;
-      console.log(`prop name ${propname}`);
-      console.log(`previous value ${previousValue}`);
-      console.log(`current  value ${currentValue}`);
-      console.log(`first name ${firstChange}`);
-      }
-  }
+ }
+  //ngOnChanges(changes: SimpleChanges): void {
+  //  console.log('ngOnChanges Called second');
+   // for(const propname in changes){
+     // const prop=changes[propname];
+      //const{previousValue,currentValue,firstChange}=prop;
+      //console.log(`prop name ${propname}`);
+      //console.log(`previous value ${previousValue}`);
+      //console.log(`current  value ${currentValue}`);
+      //console.log(`first name ${firstChange}`);
+     // }
+ // }
 
-  ngOnInit() {
-  }
+  //ngOnInit() {
+  //}
 
   
 
