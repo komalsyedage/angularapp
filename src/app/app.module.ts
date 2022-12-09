@@ -23,6 +23,9 @@ import { ChildComponent } from './child/child.component';
 import { DatabindingComponent } from './databinding/databinding.component';
 import { HookPractiseComponent } from './hook-practise/hook-practise.component';
 import { SimpletemplateformComponent } from './simpletemplateform/simpletemplateform.component';
+import { ParentComponent } from './parent/parent.component';
+import { PracticechildComponent } from './practicechild/practicechild.component';
+import { FormAssComponent } from './form-ass/form-ass.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +48,9 @@ import { SimpletemplateformComponent } from './simpletemplateform/simpletemplate
     DatabindingComponent,
     HookPractiseComponent,
     SimpletemplateformComponent,
+    ParentComponent,
+    PracticechildComponent,
+    FormAssComponent,
    
    
     

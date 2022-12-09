@@ -1,0 +1,79 @@
+<h2>Student Registration form :</h2>
+<div class="form">
+<form (ngSubmit)="OnSubmit(myForm)" #myForm="ngForm"                 >
+  <table>
+    <tbody>
+      <tr>
+        <td><label for="name"> Name :</label></td>
+        <td><input class="form-control"  type="text" placeholder="Enter Full Name" id="name" name="name" /></td>
+      </tr>
+      <tr>
+        <td><label for="dateofbirth"> Date of birth: </label></td>
+        <td><input  class="form-control"   type="date" id="dateofbirth"/></td>
+      </tr>
+
+      <tr>
+        <td><label for="gender"> Gender: </label></td>
+        <td>
+          <input    type="radio" name="gender" id="gender" /> <label> Female </label>
+          <input   type="radio" name="gender" id="gender" /> <label> Male </label>
+          <input   type="radio" name="gender" id="gender"/> <label> Others </label>
+        </td>
+      </tr>
+      <tr>
+        <td><label for="email"> Email Address:</label></td>
+        <td><input  class="form-control" type="email" placeholder="abc@gmail.com" id="email"/></td>
+      </tr>
+
+      <tr>
+        <td><label for="address"> Address: </label></td>
+        <td class="help"><textarea rows="5" cols="10" id="address" class="form-control" > </textarea></td>
+      </tr>
+      <tr></tr>
+      <tr class="self">
+        <td><label for="school"> School:</label></td>
+        <td>
+          <select>
+            <option class="form-control"  id="school">DHK Prashala</option>
+            <option class="form-control"  id="school">VVP Prashala</option>
+            <option class="form-control" id="school">Sakhubai Kanya Prashala</option>
+            <option class="form-control" id="school">Rajaram English Prashala</option>
+          </select>
+        </td>
+      </tr>
+      <tr class="self">
+        <td><label for="dept">Department:</label></td>
+        <td>
+          <select>
+            <option class="form-control" id="dept">ART</option>
+            <option class="form-control" id="dept">Commerse</option>
+            <option class="form-control" id="dept">Science</option>
+            
+          </select>
+        </td>
+      </tr>
+      <tr class="self">
+        <td><label for="course">Courses:</label></td>
+        <td>
+          <select>
+           
+            <option class="form-control" id="course">Internship Skills</option>
+            <option class="form-control"  id="course">Group Discussion</option>
+            <option  class="form-control" id="course">Resume writting</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td><label for="num">Mobile Number:</label></td>
+        <td><input type="number" id="num"  class="form-control"/></td>
+      </tr>
+    
+
+      <tr>
+        <td> <button type="submit" [disabled]="!myForm.valid" class="btn btn-primary" for="submit">Submit</button></td>
+        
+      </tr>
+    </tbody>
+  </table>
+</form>
+</div>
