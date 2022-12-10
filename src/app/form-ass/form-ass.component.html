@@ -1,79 +1,90 @@
-<h2>Student Registration form :</h2>
 <div class="form">
-<form (ngSubmit)="OnSubmit(myForm)" #myForm="ngForm"                 >
-  <table>
-    <tbody>
-      <tr>
-        <td><label for="name"> Name :</label></td>
-        <td><input class="form-control"  type="text" placeholder="Enter Full Name" id="name" name="name" /></td>
-      </tr>
-      <tr>
-        <td><label for="dateofbirth"> Date of birth: </label></td>
-        <td><input  class="form-control"   type="date" id="dateofbirth"/></td>
-      </tr>
+  <h2 id="registration">Registration Form</h2>
+  <form (ngSubmit)="OnSubmit(myForm)" #myForm="ngForm">
+    <div class="form-group">
+    <label for="name">User Name :</label>
+    <input  class="form-controls" type="text" placeholder="Enter Full Name ..." id="name" name="name" ngModel required/>
+  </div>
+  <div class="form-group">
+    <label >Date Of Birth</label><br>
+    <input  class="form-controls" type="date" id="DateOfBirth" name="DateOfBirth" ngModel/><br>
+  </div>
+  <div class="form-group">
+    <label for="gender"> Gender: </label> &nbsp;
+    <br>
+    <input type="radio" id="male" value="male" name="gender" ngModel>
+    <label for="male"> Male</label> &nbsp; &nbsp;
+    <input type="radio" id="female" value="female" name="gender" ngModel>
+    <label for="female"> Female </label>
 
-      <tr>
-        <td><label for="gender"> Gender: </label></td>
-        <td>
-          <input    type="radio" name="gender" id="gender" /> <label> Female </label>
-          <input   type="radio" name="gender" id="gender" /> <label> Male </label>
-          <input   type="radio" name="gender" id="gender"/> <label> Others </label>
-        </td>
-      </tr>
-      <tr>
-        <td><label for="email"> Email Address:</label></td>
-        <td><input  class="form-control" type="email" placeholder="abc@gmail.com" id="email"/></td>
-      </tr>
-
-      <tr>
-        <td><label for="address"> Address: </label></td>
-        <td class="help"><textarea rows="5" cols="10" id="address" class="form-control" > </textarea></td>
-      </tr>
-      <tr></tr>
-      <tr class="self">
-        <td><label for="school"> School:</label></td>
-        <td>
-          <select>
-            <option class="form-control"  id="school">DHK Prashala</option>
-            <option class="form-control"  id="school">VVP Prashala</option>
-            <option class="form-control" id="school">Sakhubai Kanya Prashala</option>
-            <option class="form-control" id="school">Rajaram English Prashala</option>
-          </select>
-        </td>
-      </tr>
-      <tr class="self">
-        <td><label for="dept">Department:</label></td>
-        <td>
-          <select>
-            <option class="form-control" id="dept">ART</option>
-            <option class="form-control" id="dept">Commerse</option>
-            <option class="form-control" id="dept">Science</option>
-            
-          </select>
-        </td>
-      </tr>
-      <tr class="self">
-        <td><label for="course">Courses:</label></td>
-        <td>
-          <select>
-           
-            <option class="form-control" id="course">Internship Skills</option>
-            <option class="form-control"  id="course">Group Discussion</option>
-            <option  class="form-control" id="course">Resume writting</option>
-          </select>
-        </td>
-      </tr>
-      <tr>
-        <td><label for="num">Mobile Number:</label></td>
-        <td><input type="number" id="num"  class="form-control"/></td>
-      </tr>
-    
-
-      <tr>
-        <td> <button type="submit" [disabled]="!myForm.valid" class="btn btn-primary" for="submit">Submit</button></td>
-        
-      </tr>
-    </tbody>
-  </table>
-</form>
 </div>
+
+  <div class="form-group">
+    <label for="email"> Email Address:</label>
+    <input class="form-control" type="email" placeholder="abc@gmail.com" id="Email" name="Email" ngModel required/>
+  </div>
+  <div class="form-group">
+    <label for="Address"> Address: </label>
+    <input  class="form-control" id="Address" type="text" name="Address" ngModel />
+  </div>
+  <div class="form-group">
+    <label for="College"> College:</label>
+    <select class="form-control"  name="College" id="college" ngModel>
+    <option value="SKN Singhad college Of Engineering">
+      SKN Singhad college Of Engineering
+    </option>
+    <option value="Fabtect college Of Engineering" >
+      Fabtect college Of Engineering
+    </option>
+    <option value="Sweri college Of Engineering" >
+      Sweri college Of Engineering
+    </option>
+    <option value="VIIT college Of Engineering" >
+      VIIT college Of Engineering
+    </option>
+  </select>
+</div>
+<div class="form-group">
+    <label for="dept">Department:</label>
+    <select id="department" class="form-controls" name="Department" id="Department" ngModel>
+    <option value="ENTC">ENTC</option>
+    <option value="CSE" >CSE</option>
+    <option value="Civil" >Civil</option>
+    <option value="Electrical" >Electrical</option>
+    <option value="Mecanical">Mecanical</option>
+  </select>
+</div>
+<div class="form-group">
+    <label for="num">Mobile Number:</label>
+    <input  type="tel" value="+91" name="MobileNo" class="form-control" ngModel/>
+  </div>
+  
+  <div class="form-group">
+    <button type="submit"  class="btn btn-primary" >
+      Submit
+      
+    </button>
+    <button  [disabled]="!myForm.valid" type="reset" class="btn btn-danger">
+      Reset
+    </button>
+    
+ 
+   
+  </div>
+  </form>
+</div>
+
+<div class="row justify-content-center mt-2" *ngIf="submitted">
+  <div class="col-md-6 rounded shadow py-4">
+      <h2>Filled Information :</h2>
+      <p>username: <strong>{{employee1.name}}</strong></p>
+      <p>DateOfBirth: <strong>{{employee1.DateOfBirth}}</strong></p>
+      <p>Gender: <strong>{{employee1.gender}}</strong></p>
+      <p>Email :<strong>{{employee1.Email}}</strong></p>
+      <p>Address:<strong>{{employee1.Address}}</strong></p>
+      <p>College:<strong>{{employee1.College}}</strong></p>
+      <p>Department:<strong>{{employee1.Department}}</strong></p>
+      <p>Mobile Number:<strong>{{employee1.MobileNo}}</strong></p>
+
+    </div>
+    </div>

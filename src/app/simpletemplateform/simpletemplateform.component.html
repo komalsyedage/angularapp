@@ -3,29 +3,55 @@
     <div class="row justify-content-center">
         <div class=".co-md-6 text-left rounded shadow py5">
             <form (ngSubmit)="OnSubmit(myForm)" #myForm="ngForm">
-                <div class="form-group">
-                    <label for="username"> User Name</label>
-                    
-                    <input type="text" class="form-control" id="username" name="userName" placeholder="Enter User Name"
-                        ngModel required>
+                <div ngModelGroup="userdetail" #userdetail="ngModelGroup">
+                    <div class="form-group">
+                        <label for="username"> User Name</label>
+
+                        <input type="text" class="form-control" id="username" name="username"
+                            placeholder="Enter User Name" [(ngModel)]="username" required />
+                        <small *ngIf="username">User Name is:{{username}}</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <!--<input type="email" class="form-control" #email="ngModel" id="email" name="email" email
+                          pattern="[@codemindTechnology.com]"  placeholder="Enter email" ngModel required />
+                        <small class="text-danger" *ngIf="!email.valid && email.touched">Enter Valid Email:</small>-->
+                    <input type="email" name="email" ngModel #email="ngModel" pattern="@codemindtechnology.com" required>
+                    <small *ngIf="email.touched">
+                        <p *ngIf="email.errors?.required">Email is Required</p>
+                        <p *ngIf="email.errors?.pattern">Valid Email Is @codemind.com</p><br>
+                    </small>
+                    </div>
+                  
                 </div>
 
                 <div class="form-group">
-                    <label for="email">Email address</label>
-                    <input type="email" class="form-control" id="email" name="email" email placeholder="Enter email"
-                        ngModel required>
-                </div>
-
-                <div class="form-group">
-                    <label for="course" Select Course></label>
-                    <select class="from-control" name="course" id="course" ngModel>
-                        <option value="Angular"> Angular </option>
-                        <option value="HTML"> HTML</option>
-                        <option value="JavaScript"> JavaScript </option>
+                    <label for="course" Select Course>Select Course</label>
+                    <select class="from-control" name="course" id="course" [ngModel]="default">
+                        <option value="Angular">Angular</option>
+                        <option value="HTML">HTML</option>
+                        <option value="JavaScript">JavaScript</option>
                     </select>
+                </div>
+                <div class="form-group">
+                    <div  *ngFor="let gender of genders"  class="custome-control custome-radio">
+                    <input type="radio" id="{{gender.id}}" name="gender" value="{{gender.value}}" class="custome-control-input" [(ngModel)]="defaultgender">
+                    <label for="{{gender.id}}" class="custome-control-label">{{gender.value}}</label>
+                </div>
                 </div>
 
                 <button type="submit" [disabled]="!myForm.valid" class="btn btn-primary">Submit</button>
+                <div class="row justify-content-center mt-2" *ngIf="submitted">
+                    <div class="col-md-6 rounded shadow py-4">
+                        <h2>Form data</h2>
+                        <p>username: <strong>{{employee.username}}</strong></p>
+                        <p>Email: <strong>{{employee.email}}</strong></p>
+                        <p>Course: <strong>{{employee.course}}</strong></p>
+                        <p>Gender:<strong>{{employee.gender}}</strong></p>
+
+                    </div>
+                </div>
             </form>
         </div>
     </div>
+</div>

@@ -58,7 +58,7 @@ import { FormAssComponent } from './form-ass/form-ass.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule   //form contron for two way databinding
+    FormsModule   //form control for two way databinding form
     
 
   ],
