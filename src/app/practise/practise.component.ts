@@ -10,7 +10,8 @@ practise:string='Simple Data Binding';
 imagepath:string='assets/images/TypeScriptImage.jpeg';
 show:string="property binding";
 display:string="Komal Dhone";
-
+value:string="Codemind";
+value1:boolean=true;
 
 @Input() name:any;
   constructor() { }

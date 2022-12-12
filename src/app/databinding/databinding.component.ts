@@ -17,6 +17,6 @@ change(){
   this.title="Complete two Types Of Databindig"
 }
 delete(){
-  this.name=' '
+  this.name=' ';
 }
 }

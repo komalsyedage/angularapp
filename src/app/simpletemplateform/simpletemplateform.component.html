@@ -17,12 +17,16 @@
                           pattern="[@codemindTechnology.com]"  placeholder="Enter email" ngModel required />
                         <small class="text-danger" *ngIf="!email.valid && email.touched">Enter Valid Email:</small>-->
                     <input type="email" name="email" ngModel #email="ngModel" pattern="@codemindtechnology.com" required>
-                    <small *ngIf="email.touched">
-                        <p *ngIf="email.errors?.required">Email is Required</p>
-                        <p *ngIf="email.errors?.pattern">Valid Email Is @codemind.com</p><br>
+                    <small *ngIf="email.touched">                                                                          
+                        
+                        <p class="text-danger" *ngIf="email.errors?.pattern">Valid Email Is @codemind.com</p><br>
                     </small>
                     </div>
                   
+                </div>
+                <div >
+                    <!-- <lable for="date"> Date </lable> -->
+                    <input type="date" min="{{minDate}}" >
                 </div>
 
                 <div class="form-group">
@@ -33,13 +37,15 @@
                         <option value="JavaScript">JavaScript</option>
                     </select>
                 </div>
+                
+                
                 <div class="form-group">
                     <div  *ngFor="let gender of genders"  class="custome-control custome-radio">
                     <input type="radio" id="{{gender.id}}" name="gender" value="{{gender.value}}" class="custome-control-input" [(ngModel)]="defaultgender">
                     <label for="{{gender.id}}" class="custome-control-label">{{gender.value}}</label>
                 </div>
                 </div>
-
+                
                 <button type="submit" [disabled]="!myForm.valid" class="btn btn-primary">Submit</button>
                 <div class="row justify-content-center mt-2" *ngIf="submitted">
                     <div class="col-md-6 rounded shadow py-4">

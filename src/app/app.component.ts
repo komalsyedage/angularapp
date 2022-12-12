@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-
+  ename:any="Parent Component";
   title = 'angularapp';
   Bank:any=[{
     bankName:"SBI",

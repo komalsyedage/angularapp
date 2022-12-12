@@ -1,9 +1,14 @@
+input.ng-invalid.ng-touched {
+    border: 1px solid red;
+    box-shadow: 0 0 13px #ff000021;
+}
+
 input[type=text],[type=email], select{
     width: 100%;
     padding: 12px 20px;
     margin:  8px 0;
     display: inline-block;
-    border:  1px solid #ccc;
+    border:  1px solid rgb(17, 3, 3);
     box-sizing: border-box;
 }
 input[type=button] {
@@ -16,42 +21,40 @@ input[type=button] {
     border-radius: 4px;
 cursor: pointer;
 }
-input[type=submit]:hover{
-    background-color: #45a049;
 
-}
-.form{
+
+.form1{
     border-radius: 5px;
    border: 2px solid brown;
-   background-color: rgb(233, 224, 224);
+  
     padding: 20px;
     width: 700px;
     margin: 30px auto;
-}
-input.ng-invalid.ng-touched {
-    border: 1px solid red;
-    box-shadow: 0 0 13px #ff000021;
+    
 }
 
 .row{
     justify-content: center;
+    background-image: url(src/assets/images/BJ-Medical-College-pune.jpg);
     height: 600px;
-   color: bisque;
+   color: rgb(14, 11, 8);
     font-size: x-large;
-    width: 600px;
-    margin-left: 75px;
+    width: 800px;
+    margin-left: 300px;
    
 }
 p{
-    color:crimson;
+    color:rgb(15, 2, 4);
+    font-size: larger;
+    font-family: fantasy;
 }
 h2{
    font-style: italic ;
+   color: black;
 }
-label{
-    font-size: larger;
-    color: black;
-}
+
 input{
     border: 2px solid black;
+    color: rgb(52, 24, 179);
+    font-size: x-large;
 }

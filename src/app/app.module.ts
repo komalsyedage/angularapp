@@ -26,6 +26,9 @@ import { SimpletemplateformComponent } from './simpletemplateform/simpletemplate
 import { ParentComponent } from './parent/parent.component';
 import { PracticechildComponent } from './practicechild/practicechild.component';
 import { FormAssComponent } from './form-ass/form-ass.component';
+import { PractiseComponent } from './practise/practise.component';
+import { PHooklifeComponent } from './p-hooklife/p-hooklife.component';
+import { RaectiveFormComponent } from './raective-form/raective-form.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +54,9 @@ import { FormAssComponent } from './form-ass/form-ass.component';
     ParentComponent,
     PracticechildComponent,
     FormAssComponent,
-   
+    PractiseComponent,
+    PHooklifeComponent,
+    RaectiveFormComponent 
    
     
   ],

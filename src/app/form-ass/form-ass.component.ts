@@ -10,6 +10,8 @@ import { Employe } from "../models/employee1";
 export class FormAssComponent implements OnInit {
   employee1 = new Employe();
   submitted: boolean;
+  mobNumberPattern="/^+91(7\d|8\d|9\d)\d{9}$/";
+ 
   constructor() {}
 
   ngOnInit() {}

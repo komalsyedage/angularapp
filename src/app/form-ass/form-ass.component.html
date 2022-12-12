@@ -1,90 +1,126 @@
-<div class="form">
+<div class="form1">
   <h2 id="registration">Registration Form</h2>
   <form (ngSubmit)="OnSubmit(myForm)" #myForm="ngForm">
     <div class="form-group">
-    <label for="name">User Name :</label>
-    <input  class="form-controls" type="text" placeholder="Enter Full Name ..." id="name" name="name" ngModel required/>
-  </div>
-  <div class="form-group">
-    <label >Date Of Birth</label><br>
-    <input  class="form-controls" type="date" id="DateOfBirth" name="DateOfBirth" ngModel/><br>
-  </div>
-  <div class="form-group">
-    <label for="gender"> Gender: </label> &nbsp;
-    <br>
-    <input type="radio" id="male" value="male" name="gender" ngModel>
-    <label for="male"> Male</label> &nbsp; &nbsp;
-    <input type="radio" id="female" value="female" name="gender" ngModel>
-    <label for="female"> Female </label>
+      <label for="name">
+        <h4>User Name :</h4>
+      </label>
+      <input class="form-control" type="text" placeholder="Enter Full Name ..." id="name" name="name" #name="ngModel"
+        [(ngModel)]="reArray.name" minlength="4" required />
+
+    </div>
+
+<div class="form-group">
+  <label>
+    <h4>Date Of Birth</h4>
+  </label><br>
+  <input class="form-control" type="date" id="DateOfBirth" name="DateOfBirth" ngModel /><br>
+</div>
+<div class="form-group">
+  <label for="gender">
+    <h4>Gender:</h4>
+  </label> &nbsp;
+  <br>
+  <input type="radio" id="male" value="male" name="gender" ngModel>
+  <label for="male">
+    <h4> Male</h4>
+  </label> &nbsp; &nbsp;
+  <input type="radio" id="female" value="female" name="gender" ngModel>
+  <label for="female">
+    <h4> Female </h4>
+  </label>
 
 </div>
 
-  <div class="form-group">
-    <label for="email"> Email Address:</label>
-    <input class="form-control" type="email" placeholder="abc@gmail.com" id="Email" name="Email" ngModel required/>
+<div class="form-group">
+  <label for="email">
+    <h4>Email Address:</h4>
+  </label>
+  <input class="form-control" type="email" placeholder="abc@gmail.com" id="Email" name="Email" #emailId="ngModel"
+    [(ngModel)]="reArray.email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required />
+  <div class="error.msg" *ngIf="(emailId.touched || loginForm.submitted) && emailId.errors?.required">
+    Email Address Is Required
   </div>
-  <div class="form-group">
-    <label for="Address"> Address: </label>
-    <input  class="form-control" id="Address" type="text" name="Address" ngModel />
-  </div>
-  <div class="form-group">
-    <label for="College"> College:</label>
-    <select class="form-control"  name="College" id="college" ngModel>
+
+</div>
+<div class="form-group">
+  <label for="Address">
+    <h4> Address:</h4>
+  </label>
+  <input class="form-control" id="Address" type="text" name="Address" ngModel />
+</div>
+<div class="form-group">
+  <label for="College">
+    <h4> College:</h4>
+  </label>
+  <select class="form-control" name="College" id="college" ngModel>
     <option value="SKN Singhad college Of Engineering">
       SKN Singhad college Of Engineering
     </option>
-    <option value="Fabtect college Of Engineering" >
+    <option value="Fabtect college Of Engineering">
       Fabtect college Of Engineering
     </option>
-    <option value="Sweri college Of Engineering" >
+    <option value="Sweri college Of Engineering">
       Sweri college Of Engineering
     </option>
-    <option value="VIIT college Of Engineering" >
+    <option value="VIIT college Of Engineering">
       VIIT college Of Engineering
     </option>
   </select>
 </div>
 <div class="form-group">
-    <label for="dept">Department:</label>
-    <select id="department" class="form-controls" name="Department" id="Department" ngModel>
+  <label for="dept">
+    <h4>Department:</h4>
+  </label>
+  <select id="department" class="form-control" name="Department" id="Department" ngModel>
     <option value="ENTC">ENTC</option>
-    <option value="CSE" >CSE</option>
-    <option value="Civil" >Civil</option>
-    <option value="Electrical" >Electrical</option>
+    <option value="CSE">CSE</option>
+    <option value="Civil">Civil</option>
+    <option value="Electrical">Electrical</option>
     <option value="Mecanical">Mecanical</option>
   </select>
 </div>
 <div class="form-group">
-    <label for="num">Mobile Number:</label>
-    <input  type="tel" value="+91" name="MobileNo" class="form-control" ngModel/>
+  <label for="num">
+    <h4>Mobile Number:</h4>
+  </label>
+  <input type="tel" value="+91" name="MobileNo" class="form-control" #mobilenumber="ngModel"
+    [(ngModel)]="reArray.mobilenumber" minlength="6" pattern="mobNumberPattern" required />
+  <div class="error-msg" *ngIf="(mobilenumber.touched || loginForm.submitted) && mobilenumber.errors?.required">
+    Mobile No Is Required
   </div>
-  
-  <div class="form-group">
-    <button type="submit"  class="btn btn-primary" >
-      Submit
-      
-    </button>
-    <button  [disabled]="!myForm.valid" type="reset" class="btn btn-danger">
-      Reset
-    </button>
-    
- 
-   
+
+  <div class="error-msg" *ngIf="(mobilenumber.touched || loginForm.submitted) && mobilenumber.pattern?.required">
+    Enter a Valid Mobile Number Starting with 9
   </div>
-  </form>
+
+
+
+</div>
+
+<div class="form-group">
+  <button type="submit" class="btn btn-primary">
+    Submit
+
+  </button>
+  <button [disabled]="!myForm.valid" type="reset" class="btn btn-danger">
+    Reset
+  </button>
+</div>
+</form>
 </div>
 
 <div class="row justify-content-center mt-2" *ngIf="submitted">
   <div class="col-md-6 rounded shadow py-4">
-      <h2>Filled Information :</h2>
-      <p>username: <strong>{{employee1.name}}</strong></p>
-      <p>DateOfBirth: <strong>{{employee1.DateOfBirth}}</strong></p>
-      <p>Gender: <strong>{{employee1.gender}}</strong></p>
-      <p>Email :<strong>{{employee1.Email}}</strong></p>
-      <p>Address:<strong>{{employee1.Address}}</strong></p>
-      <p>College:<strong>{{employee1.College}}</strong></p>
-      <p>Department:<strong>{{employee1.Department}}</strong></p>
-      <p>Mobile Number:<strong>{{employee1.MobileNo}}</strong></p>
+    <h2>Filled Information :</h2>
+    <p>username: <strong>{{employee1.name}}</strong></p>
+    <p>DateOfBirth: <strong>{{employee1.DateOfBirth}}</strong></p>
+    <p>Gender: <strong>{{employee1.gender}}</strong></p>
+    <p>Email :<strong>{{employee1.Email}}</strong></p>
+    <p>Address:<strong>{{employee1.Address}}</strong></p>
+    <p>College:<strong>{{employee1.College}}</strong></p>
+    <p>Department:<strong>{{employee1.Department}}</strong></p>
+    <p>Mobile Number:<strong>{{employee1.MobileNo}}</strong></p>
 
-    </div>
-    </div>
+  </div>
+</div>
