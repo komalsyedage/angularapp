@@ -16,7 +16,7 @@ myReactiveForm: FormGroup;
   }
 createForm(){
 this.myReactiveForm=new FormGroup({
-  'username':new FormControl('',Validators.required),
+  'username':new FormControl('',Validators.required),//'' we write default value
   'email':new FormControl('',Validators.required),
 });
 }
