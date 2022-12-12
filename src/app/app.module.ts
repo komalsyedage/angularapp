@@ -8,7 +8,7 @@ import { warningComponent } from './warningAlert/warningAlert.component';
 import { successAlertComponent } from './warningAlert/successAlert/successAlert.component';
 
 import { ServersComponent } from './servers/servers.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DemodirectivesComponent } from './demodirectives/demodirectives.component';
 import { NgswitchComponent } from './ngswitch/ngswitch.component';
 import { NgifForSwitchComponent } from './ngif-for-switch/ngif-for-switch.component';
@@ -56,14 +56,15 @@ import { RaectiveFormComponent } from './raective-form/raective-form.component';
     FormAssComponent,
     PractiseComponent,
     PHooklifeComponent,
-    RaectiveFormComponent 
+    RaectiveFormComponent,
    
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule   //form control for two way databinding form
+    FormsModule,//form control for two way databinding form
+    ReactiveFormsModule,
     
 
   ],
