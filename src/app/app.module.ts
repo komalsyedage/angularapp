@@ -29,6 +29,7 @@ import { FormAssComponent } from './form-ass/form-ass.component';
 import { PractiseComponent } from './practise/practise.component';
 import { PHooklifeComponent } from './p-hooklife/p-hooklife.component';
 import { RaectiveFormComponent } from './raective-form/raective-form.component';
+import { TFormAssignmentComponent } from './tform-assignment/tform-assignment.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +58,7 @@ import { RaectiveFormComponent } from './raective-form/raective-form.component';
     PractiseComponent,
     PHooklifeComponent,
     RaectiveFormComponent,
+    TFormAssignmentComponent,
    
     
   ],

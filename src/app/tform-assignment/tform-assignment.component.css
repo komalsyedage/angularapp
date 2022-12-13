@@ -1,0 +1,28 @@
+.error-msg{
+    font-size: 30px;
+    color: red;
+    font-size: x-large;
+}
+input.ng-invalid.ng-touched {
+    border: 2px solid red;
+    font-weight: 500;
+    font-size: xx-large;
+    box-shadow: 0 0 13px #ff000021;
+}
+body{
+    background-image: url(src/assets/images/dpa.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-left: 100px;
+    height: 100%;
+}
+strong{
+    color: crimson;
+    font-size: x-large;
+    font-family: sans-serif;
+}
+p{
+    color: black;
+    font-size: xx-large;
+    font-weight: 300;
+}
