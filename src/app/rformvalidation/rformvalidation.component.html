@@ -1,0 +1,34 @@
+<p>rformvalidation works!</p>
+<form class="input" [formGroup]="myReactiveForm" (ngSubmit)="OnSubmit()">
+    <h2>Reactive  Form</h2>
+    <div class="input-container">
+     
+      <i class="fa fa-user icon"></i>
+      
+      <input class="input-field" type="text"  formControlName="username" placeholder="Username" name="username"><br>
+      <small class="text-danger" *ngIf="myReactiveForm.get('username').touched  &&  myReactiveForm.get('username').hasError('required')">
+        Please  Enter User Name
+      </small>
+    </div>
+  
+    <div class="input-container">
+      
+      <i class="fa fa-envelope icon"></i>
+      <input class="input-field" type="text" formControlName="email"  placeholder="Email" name="email">
+      <small class="text-danger" *ngIf="myReactiveForm.get('email').touched  &&  myReactiveForm.get('email').hasError('required')">
+        please Enter Email
+   </small>
+    </div>
+  
+    <div class="input-container">
+      <i class="fa fa-key icon"></i>
+      <input class="input-field" type="password" formControlName="password"  placeholder="Password" name="psw">
+      <small class="text-danger" *ngIf="myReactiveForm.get('password').touched  &&  myReactiveForm.get('password').hasError('required')">
+        Enter Password
+   </small>
+    </div>
+  
+    
+  
+    <button type="submit" class="btn">Login</button>
+  </form>
