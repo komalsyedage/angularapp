@@ -9,9 +9,15 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class RaectiveFormComponent implements OnInit {
 myReactiveForm: FormGroup;
 notAllowedNames=['Codemind','Technology']
-genders=[
-  {id:'1',value:'male'},
-{ id:'2',value:'Female'}]
+genders= [ 
+  {
+    id:'1',
+    value:'male'
+  },
+{ 
+  id:'2',
+  value:'Female'
+}]
   constructor() {
     this.createForm();
    }
@@ -20,10 +26,10 @@ genders=[
   }
 createForm(){
 this.myReactiveForm=new FormGroup({
-  'username':new FormControl('', [Validators.required,this.NaNames.bind(this)]),//Validators.minLength(5),
+  'username':new FormControl('', [Validators.required,this.NaNames.bind(this)]),  //Validators.minLength(5),
     //'' we write default value []=for multiple 
   'email':new FormControl('',[Validators.required,Validators.email]),
-  'course':new FormControl('',Validators.required),
+  'course':new FormControl('Angular',Validators.required),
   'gender':new FormControl('')
 });
 }
@@ -32,7 +38,7 @@ OnSubmit(){
   
 };
 NaNames(control:FormControl){
-    if(this.notAllowedNames.indexOf(control.value)!==-1){
+    if(this.notAllowedNames.indexOf(control.value) !== -1){
       return {'namesnotallowed':true}
     }
     return null;
