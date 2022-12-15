@@ -28,9 +28,10 @@ import { PracticechildComponent } from './practicechild/practicechild.component'
 import { FormAssComponent } from './form-ass/form-ass.component';
 import { PractiseComponent } from './practise/practise.component';
 import { PHooklifeComponent } from './p-hooklife/p-hooklife.component';
-import { RaectiveFormComponent } from './raective-form/raective-form.component';
+
 import { TFormAssignmentComponent } from './tform-assignment/tform-assignment.component';
 import { RFormvalidationComponent } from './rformvalidation/rformvalidation.component';
+import { ReactiveformComponent } from './reactiveform.component';
 
 @NgModule({
   declarations: [
@@ -58,10 +59,10 @@ import { RFormvalidationComponent } from './rformvalidation/rformvalidation.comp
     FormAssComponent,
     PractiseComponent,
     PHooklifeComponent,
-    RaectiveFormComponent,
+    
     TFormAssignmentComponent,
     RFormvalidationComponent,
-   
+    ReactiveformComponent
     
   ],
   imports: [

@@ -1,34 +1,66 @@
-<p>rformvalidation works!</p>
+
 <form class="input" [formGroup]="myReactiveForm" (ngSubmit)="OnSubmit()">
-    <h2>Reactive  Form</h2>
-    <div class="input-container">
-     
-      <i class="fa fa-user icon"></i>
-      
-      <input class="input-field" type="text"  formControlName="username" placeholder="Username" name="username"><br>
-      <small class="text-danger" *ngIf="myReactiveForm.get('username').touched  &&  myReactiveForm.get('username').hasError('required')">
-        Please  Enter User Name
+    <h2>Reactive  Form using Validations</h2>
+    <div class="form-group">
+     <label for="fname">First Name :</label><br/>
+      <input class="input-field" type="text"  formControlName="fname" placeholder="***fname***" name="fname"><br>
+      <small class="text-danger" *ngIf="!myReactiveForm.get('fname').valid  &&  myReactiveForm.get('fname').touched">
+       
+        <small *ngIf="myReactiveForm.get('fname').errors['required']">please Enter first Name</small>
+        <small  *ngIf="myReactiveForm.get('fname').errors['maxLength(5)']">max {{myReactiveForm.get('fname').value}}</small>
+
       </small>
     </div>
-  
-    <div class="input-container">
-      
-      <i class="fa fa-envelope icon"></i>
-      <input class="input-field" type="text" formControlName="email"  placeholder="Email" name="email">
-      <small class="text-danger" *ngIf="myReactiveForm.get('email').touched  &&  myReactiveForm.get('email').hasError('required')">
+
+    <div class="form-group">
+      <label for="lname">Last Name :</label><br/>
+       <input class="input-field" type="text"  formControlName="lname" placeholder="***lname***" name="lname"><br>
+       <small class="text-danger" *ngIf="myReactiveForm.get('lname').valid  &&   myReactiveForm.get('lname').touched">
+         Please  Enter User Name
+       </small>
+     </div>
+     <div class="form-group">
+      <label for="email"> Email</label><br/>
+      <input class="input-field" type="text" formControlName="email"  placeholder=" ***Email***" name="email">
+      <small class="text-danger" *ngIf="myReactiveForm.get('email').valid  &&   myReactiveForm.get('email').touched">
         please Enter Email
    </small>
     </div>
-  
-    <div class="input-container">
-      <i class="fa fa-key icon"></i>
+     <div class="form-group">
+      <label for="phone"> phone</label><br/>
+      <input class="input-field" type="text" formControlName="phone"  placeholder=" ***phone***" name="phone">
+      <small class="text-danger" *ngIf="myReactiveForm.get('phone').valid  &&   myReactiveForm.get('phone').touched">
+        please Enter phone
+   </small>
+    </div><br>
+    <div class="form-group">
+      <label for="city" Select city>City</label>
+      <select class="from-control" name="city" id="city" formControlName="city">
+          <option value="Angular">Mumbai</option>
+          <option value="HTML">Kolkatta</option>
+          <option value="JavaScript">Delhi</option>
+      </select>
+  </div>
+  <div class="form-group">
+    <label for="gender">Gender</label>
+    <div class="custom-control custom-radio" *ngFor="let gender of genders">
+    
+      <input type="radio" id="{{gender.id}}" value="{{gender.value}}" class="custom-control-input" formControlName="gender">
+    <label for="{{gender.id}}">{{gender.value}}</label>
+</div>
+</div>
+  <div class="form-group">
+      <label for="Password">Password</label><br/>
       <input class="input-field" type="password" formControlName="password"  placeholder="Password" name="psw">
-      <small class="text-danger" *ngIf="myReactiveForm.get('password').touched  &&  myReactiveForm.get('password').hasError('required')">
+      <small class="text-danger" *ngIf="myReactiveForm.get('password').valid &&   myReactiveForm.get('password').touched">
         Enter Password
    </small>
     </div>
-  
-    
-  
-    <button type="submit" class="btn">Login</button>
-  </form>
+   <div class="form-group">
+      <label for="confermpass">Confirm password</label><br/>
+      <input class="input-field" type="confermpass" formControlName="confermpass"  placeholder="confermpass" name="psw">
+      <small class="text-danger" *ngIf="myReactiveForm.get('confermpass').valid  &&   myReactiveForm.get('confermpass').touched">
+         conferm Password 
+   </small>
+    </div>
+    <button class="btn btn-success mt-4">Submit</button>

@@ -9,14 +9,6 @@ body{
   margin-bottom: 15px;
 }
 
-/* Style the form icons */
-.icon {
-  padding: 10px;
-  background: dodgerblue;
-  color: white;
-  min-width: 50px;
-  text-align: center;
-}
 
 /* Style the input fields */
 .input-field {
@@ -40,15 +32,6 @@ body{
   opacity: 0.9;
 }
 
-.btn:hover {
-  opacity: 1;
-}
 input.ng-invalid.ng-touched{
   background-color: rgb(240, 175, 175);
-}
-.input{
-  background-image:url(src/assets/images/nature.jpg);
- margin-left: 100px;
- height: 400px;
- width: 500px;
 }

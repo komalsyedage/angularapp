@@ -1,1 +1,96 @@
-/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files
+body{
+    background-color: rgb(58, 58, 243);
+    padding-left: 200px;
+    padding-right: 200px;
+}
+* {box-sizing: border-box;}
+
+/* Style the input container */
+/*.input-container {
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+
+.icon {
+  padding: 10px;
+  background: dodgerblue;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+}
+
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+}
+
+.input-field:focus {
+  border: 2px solid dodgerblue;
+}
+
+.btn {
+  background-color: dodgerblue;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+input.ng-invalid.ng-touched{
+  background-color: rgb(240, 175, 175);
+}
+label{
+    color: rgb(83, 19, 31);
+    font-size: x-large;
+    font-weight: 400;
+}
+::placeholder{
+    color: rgb(2, 2, 17);
+    font-size: x-large;
+    font-weight: 400;
+   
+}*/
+body{
+  background-image: url(src/assets/images/flower.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding:400px;
+  margin: 20px;
+  padding-top: 600px;
+}
+label{
+  color: black;
+  font-size:x-large;
+  font-weight: 700;
+ font-style: italic;
+}
+input{
+  color: rgb(1, 1, 14);
+  font-size: medium;
+  font-weight: 700;
+border-color: rgb(12, 1, 3);
+border-radius: 20px ;
+background-color: rgb(173, 177, 169);
+}
+small{
+  color: crimson;
+  font-size:medium;
+  font-weight: 400;
+  font-style: italic;
+}
+h2{
+  font-size: x-large;
+  font-style: italic;
+  font-weight: 700;
+  color: rgb(58, 7, 7);
+}
