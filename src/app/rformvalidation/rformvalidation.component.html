@@ -1,66 +1,117 @@
-
-<form class="input" [formGroup]="myReactiveForm" (ngSubmit)="OnSubmit()">
-    <h2>Reactive  Form using Validations</h2>
-    <div class="form-group">
-     <label for="fname">First Name :</label><br/>
-      <input class="input-field" type="text"  formControlName="fname" placeholder="***fname***" name="fname"><br>
-      <small class="text-danger" *ngIf="!myReactiveForm.get('fname').valid  &&  myReactiveForm.get('fname').touched">
-       
-        <small *ngIf="myReactiveForm.get('fname').errors['required']">please Enter first Name</small>
-        <small  *ngIf="myReactiveForm.get('fname').errors['maxLength(5)']">max {{myReactiveForm.get('fname').value}}</small>
-
-      </small>
-    </div>
-
-    <div class="form-group">
-      <label for="lname">Last Name :</label><br/>
-       <input class="input-field" type="text"  formControlName="lname" placeholder="***lname***" name="lname"><br>
-       <small class="text-danger" *ngIf="myReactiveForm.get('lname').valid  &&   myReactiveForm.get('lname').touched">
-         Please  Enter User Name
-       </small>
-     </div>
-     <div class="form-group">
-      <label for="email"> Email</label><br/>
-      <input class="input-field" type="text" formControlName="email"  placeholder=" ***Email***" name="email">
-      <small class="text-danger" *ngIf="myReactiveForm.get('email').valid  &&   myReactiveForm.get('email').touched">
-        please Enter Email
-   </small>
-    </div>
-     <div class="form-group">
-      <label for="phone"> phone</label><br/>
-      <input class="input-field" type="text" formControlName="phone"  placeholder=" ***phone***" name="phone">
-      <small class="text-danger" *ngIf="myReactiveForm.get('phone').valid  &&   myReactiveForm.get('phone').touched">
-        please Enter phone
-   </small>
-    </div><br>
-    <div class="form-group">
-      <label for="city" Select city>City</label>
-      <select class="from-control" name="city" id="city" formControlName="city">
-          <option value="Angular">Mumbai</option>
-          <option value="HTML">Kolkatta</option>
-          <option value="JavaScript">Delhi</option>
-      </select>
+<form class="border  border-dark p-3" [formGroup]="registerform" (ngSubmit)="registerSubmitted()">
+  <div class="row g-0">
+    <div class="col text-center p-2 mb-3 bg-light">
+      <span class="fs-3">Reactive Form</span>
+   </div>
   </div>
-  <div class="form-group">
-    <label for="gender">Gender</label>
-    <div class="custom-control custom-radio" *ngFor="let gender of genders">
-    
-      <input type="radio" id="{{gender.id}}" value="{{gender.value}}" class="custom-control-input" formControlName="gender">
-    <label for="{{gender.id}}">{{gender.value}}</label>
+  <div class="row">
+    <div class="col mb-3">
+      <label for="firstname" class="form-label">First name :</label>
+      <input type="text" class="form-control" id="firstname" formControlName="firstname" required placeholder="Enter first Nmae">
+      <div class="form-text text-danger" *ngIf="!Firstname.valid && Firstname.touched">
+        <small *ngIf="Firstname.errors.required">
+          First Name is Required</small>
+        <small *ngIf="Firstname.errors.minLength">
+          First Name is Too Short...</small>
+        <small *ngIf="Firstname.errors.maxLength">
+          First Name is Too long...</small>
+      </div>
+   </div>
+   <div class="col mb-3">
+      <label for="lastname" class="form-label">Last name :</label>
+      <input type="text" class="form-control" id="lastname" formControlName="lastname">
+      <div class="form-text text-danger" *ngIf="!Lastname.valid && Lastname.touched">
+        <div *ngIf="Lastname.hasError('required')">
+          Last Name is Required</div>
+        <div *ngIf="Lastname.hasError('minLength')">
+          Last Name is Too Short...</div>
+        <div *ngIf="!Lastname.hasError('maxLength')">
+          Last Name is Too long...</div>
+      </div>
+    </div>
+   </div>
+ <div class="row">
+    <div class="col mb-3">
+      <label for="email" class="form-label">Email:</label>
+      <input type="email" class="form-control" id="email" formControlName="email">
+      <div class="form-text text-danger" *ngIf="!Email.valid && Email.touched">
+        <div *ngIf="Email.hasError('required')">Enter Email</div>
+        <div *ngIf="Email.hasError('email')">Enter correct Email</div>
+      </div>
+    </div>
+   <div class="row">
+   </div>
+    <div class="col mb-3">
+      <label for="mobile" class="form-label">Mobile Number :</label>
+      <input type="number" class="form-control" id="mobile" formControlName="mobile">
+      <div class="form-text text-danger" *ngIf="!Mobile.valid && Mobile.touched">
+        <div *ngIf="Mobile.hasError('required')">
+          Phone No Is REquire...</div>
+        <div *ngIf="Mobile.hasError('minLength')">
+          No Is is Too Short...</div>
+        <div *ngIf="Mobile.hasError('maxLength')">
+          No is Too long...</div>
+      </div>
+    </div>
+     <div class="col ps-3 mb-3">
+      <label class="m-1" for="gender">Gender :</label><br>
+
+      <div class=" form-check form-check-inline">
+        <input type="radio" class="form-check-input" value="m" id="male" formControlName="gender">
+        <label class="form-check-label" for="male">Male</label>
+     </div>
+     <div class=" form-check form-check-inline">
+        <input type="radio" class="form-check-input" value="f" id="female" formControlName="gender">
+        <label class="form-check-label" for="female">Female</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col mb-3">
+        <label for="city" Select Course>City</label>
+        <select class="from-control" id="city" formControlName="city">
+          <option value="Mumbai">Mumbai</option>
+          <option value="Kolkatta">Kolkatta</option>
+          <option value="Delhi">Delhi</option>
+        </select>
+      </div>
+    </div>
+  </div>
+ <div class="row">
+    <div class="col mb-3">
+      <label for="pwd" class="form-label">Password</label>
+      <input type="password" class="form-control" id="pwd" formControlName="pwd">
+      <div class="form-text text-danger" *ngIf="!Pwd.valid && Pwd.touched">
+        <div *ngIf="Pwd.hasError('required')">Please Enter Password</div>
+      </div>
+   </div>
+   <div class="col mb-3">
+      <label for="pwd" class="form-label">Confirm Password</label>
+      <input type="password" class="form-control" id="pwd" formControlName="pwd">
+      <div class="form-text text-danger" *ngIf="!Pwd.valid && Pwd.touched">
+        <div *ngIf="Pwd.hasError('required')">Enter Confirm Password</div>
+    </div>
 </div>
 </div>
-  <div class="form-group">
-      <label for="Password">Password</label><br/>
-      <input class="input-field" type="password" formControlName="password"  placeholder="Password" name="psw">
-      <small class="text-danger" *ngIf="myReactiveForm.get('password').valid &&   myReactiveForm.get('password').touched">
-        Enter Password
-   </small>
+  <div class="row">
+    <div class="col-6 offset-3">
+      <div class="d-grid">
+        <button type="submit" class="btn btn-primary">Register</button>
+      </div>
     </div>
-   <div class="form-group">
-      <label for="confermpass">Confirm password</label><br/>
-      <input class="input-field" type="confermpass" formControlName="confermpass"  placeholder="confermpass" name="psw">
-      <small class="text-danger" *ngIf="myReactiveForm.get('confermpass').valid  &&   myReactiveForm.get('confermpass').touched">
-         conferm Password 
-   </small>
-    </div>
-    <button class="btn btn-success mt-4">Submit</button>
+  </div>
+</form>
+<!--<form class="border  border-dark p-3" [formGroup]="registerform" (ngSubmit)="registerSubmitted()">
+<div class="col mb-3">
+  <label for="lastname" class="form-label">Last name :</label>
+  <input type="text" class="form-control" id="lastname" formControlName="lastname" >
+  <small class="text-danger" *ngIf="!Lastname.valid &&  Lastname.touched">
+  <div class="form-text text-danger" *ngIf="Lastname.errors['required'] && (Lastname.dirty || Lastname.touched)">
+    Enter lastname </div>
+    <div class="form-text text-danger" *ngIf="Lastname.errors['minLength'] && (Lastname.dirty || Lastname.touched)">
+      Last Name short</div>
+    <div class="form-text text-danger" *ngIf="Lastname.errors['maxLength'] && (Lastname.dirty || Lastname.touched)">
+      Last Name is Too long...</div>
+  
+</small>
+</div>
+</form>-->

@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ServerComponent } from './server/server.component';
@@ -31,7 +30,11 @@ import { PHooklifeComponent } from './p-hooklife/p-hooklife.component';
 
 import { TFormAssignmentComponent } from './tform-assignment/tform-assignment.component';
 import { RFormvalidationComponent } from './rformvalidation/rformvalidation.component';
-import { ReactiveformComponent } from './reactiveform.component';
+import { ReactiveformComponent } from './reactiveform/reactiveform.component';
+import { SFormComponent } from './s-form/s-form.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -59,19 +62,21 @@ import { ReactiveformComponent } from './reactiveform.component';
     FormAssComponent,
     PractiseComponent,
     PHooklifeComponent,
-    
     TFormAssignmentComponent,
     RFormvalidationComponent,
-    ReactiveformComponent
+    ReactiveformComponent,
+    ReactiveformComponent,
+    SFormComponent
+    
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,//form control for two way databinding form
-    ReactiveFormsModule,
-    
-
+    FormsModule,
+    ReactiveFormsModule
+  //form control for two way databinding form
+   
   ],
   providers: [],
   bootstrap: [AppComponent]

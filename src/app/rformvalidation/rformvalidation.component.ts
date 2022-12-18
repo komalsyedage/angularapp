@@ -1,3 +1,4 @@
+import { variable } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Emp } from '../models/emp';
@@ -9,57 +10,62 @@ import { Employee } from '../models/employee';
   styleUrls: ['./rformvalidation.component.css']
 })
 export class RFormvalidationComponent implements OnInit {
-  myReactiveForm: FormGroup;
+
   employee: any;
-  submitted: boolean;
-  genders = [
-    {
-      id: '1',
-      value: 'Male'
-    },
-    {
-      id: '2',
-      value: 'Female'
-    }
-  ]
-  
+  submitted: boolean = false;
+ 
 
   constructor() { 
-    this.createForm();
+    
   }
 
-  ngOnInit() {
-  }
-  createForm(){
-    this.myReactiveForm=new FormGroup({
-      'fname':new FormControl('', [Validators.required,Validators.maxLength(5),Validators.minLength(4),Validators.pattern('[a-zA-Z]*')]),//Validators.minLength(5),
-        //'' we write default value []=for multiple 
-        'lname':new FormControl('',[Validators.required,Validators.maxLength(10)]),
-        'age':new FormControl('',[Validators.required,Validators.min(17),Validators.max(20)]),
-      'email':new FormControl('',[Validators.required,Validators.email]),
-      'phone':new FormControl('',[Validators.required,Validators.maxLength(10),Validators.pattern("^[0-9]*$")]),
-      'city':new FormControl('',Validators.required),
-      'gender':new FormControl('Female',Validators.required),
-      'password':new FormControl('',[Validators.required]),
-      'confermpass':new FormControl('',[Validators.required]),
-      
-      
-    });
-    }
-    OnSubmit(form: FormControl){
-      console.log(this.myReactiveForm);
-      this.submitted=true;
-      this.employee.fname=form.value.fname;
-      this.employee.email=form.value.email;
-    };
-    
-  saveEmployeeData(emp:Emp) {
-    console.log(emp.fname)
-      
-      
-      
-      
-      
+ngOnInit(){
     
   }
-}
+ registerform= new FormGroup({
+
+  firstname: new FormControl('', [Validators.required,Validators.minLength(4),Validators.maxLength(5),
+    Validators.pattern("[a-zA-Z].*")]),
+   lastname: new FormControl('', [Validators.required, Validators.minLength(4),Validators.maxLength(5)]),
+      email: new FormControl('',[Validators.required,Validators.email]),
+      mobile: new FormControl('',[Validators.required,Validators.minLength(10),Validators.maxLength(10),Validators.pattern("[0-9]*")]),
+      city: new FormControl('Mumbai',[Validators.required]),
+      gender: new FormControl('f',[Validators.required]),
+      pwd: new FormControl('',[Validators.required]),
+     
+  })
+  registerSubmitted(){
+    console.log(this.registerform);
+    
+  }
+  OnSubmit()
+  {
+   
+    
+  }
+  get Firstname(){
+    return this.registerform.get('firstname') as FormControl;
+  }
+  get Lastname(){
+    return this.registerform.get('lastname') as FormControl;
+  }
+  get Email(){
+    return this.registerform.get('email') as FormControl;
+  }
+  get Mobile(){
+    return this.registerform.get('mobile') as FormControl;
+  }
+  get City(){
+    return this.registerform.get('city') as FormControl;
+  }
+  get Gender(){
+    return this.registerform.get('gender') as FormControl;
+  }
+  get Pwd(){
+    return this.registerform.get('pwd') as FormControl;
+  }
+  }
+
+  
+
+

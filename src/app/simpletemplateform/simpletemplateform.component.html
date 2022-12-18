@@ -17,7 +17,7 @@
                           pattern="[@codemindTechnology.com]"  placeholder="Enter email" ngModel required />
                         <small class="text-danger" *ngIf="!email.valid && email.touched">Enter Valid Email:</small>-->
                     <input type="email" name="email" ngModel #email="ngModel" pattern="@codemindtechnology.com" required>
-                    <small *ngIf="email.touched">                                                                          
+                    <small *ngIf="email.touched">                                                                         
                         
                         <p class="text-danger" *ngIf="email.errors?.pattern">Valid Email Is @codemind.com</p><br>
                     </small>
@@ -29,7 +29,7 @@
                     <input type="date" min="{{minDate}}" >
                 </div>
 
-                <div class="form-group">
+            <div class="form-group">
                     <label for="course" Select Course>Select Course</label>
                     <select class="from-control" name="course" id="course" [ngModel]="default">
                         <option value="Angular">Angular</option>
@@ -54,7 +54,6 @@
                         <p>Email: <strong>{{employee.email}}</strong></p>
                         <p>Course: <strong>{{employee.course}}</strong></p>
                         <p>Gender:<strong>{{employee.gender}}</strong></p>
-
                     </div>
                 </div>
             </form>

@@ -20,10 +20,10 @@ export class TFormAssignmentComponent implements OnInit {
   }
   OnSubmit(form:NgForm){
     this.submitted = true;
-    this.emp.username = form.value.userDetails.username;
-    this.emp.email = form.value.userDetails.email;
-    this.emp.subscription = form.value.userDetails.subscription;
-    this.emp.password = form.value.userDetails.password;
+    this.emp.username = form.value.username;
+    this.emp.email = form.value.email;
+    this.emp.subscription = form.value.subscription;
+    this.emp.password = form.value.password;
     
     console.log(form.controls);
     
