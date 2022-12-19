@@ -2,96 +2,95 @@
   <div class="row g-0">
     <div class="col text-center p-2 mb-3 bg-light">
       <span class="fs-3">Reactive Form</span>
-   </div>
+    </div>
   </div>
   <div class="row">
     <div class="col mb-3">
       <label for="firstname" class="form-label">First name :</label>
-      <input type="text" class="form-control" id="firstname" formControlName="firstname" required placeholder="Enter first Nmae">
-      <div class="form-text text-danger" *ngIf="!Firstname.valid && Firstname.touched">
-        <small *ngIf="Firstname.errors.required">
-          First Name is Required</small>
-        <small *ngIf="Firstname.errors.minLength">
-          First Name is Too Short...</small>
-        <small *ngIf="Firstname.errors.maxLength">
-          First Name is Too long...</small>
-      </div>
-   </div>
-   <div class="col mb-3">
-      <label for="lastname" class="form-label">Last name :</label>
-      <input type="text" class="form-control" id="lastname" formControlName="lastname">
-      <div class="form-text text-danger" *ngIf="!Lastname.valid && Lastname.touched">
-        <div *ngIf="Lastname.hasError('required')">
-          Last Name is Required</div>
-        <div *ngIf="Lastname.hasError('minLength')">
-          Last Name is Too Short...</div>
-        <div *ngIf="!Lastname.hasError('maxLength')">
-          Last Name is Too long...</div>
-      </div>
+      <input type="text" class="form-control" id="firstname" formControlName="firstname" required
+        placeholder="Enter first Nmae"  minlength="4" maxlength="10">
+
+      <small *ngIf="Firstname.errors?.required &&  Firstname.touched">
+        First Name is Required...</small>
+      <small *ngIf="Firstname.errors?.minlength &&  Firstname.touched">
+        First Name is Too Short...</small>
+      <small *ngIf="Firstname.errors?.maxlength && Firstname.touched">
+        First Name is Too long...</small>
     </div>
-   </div>
- <div class="row">
+  </div>
+  <div class="col mb-3">
+    <label for="lastname" class="form-label">Last name :</label>
+    <input type="text" class="form-control" id="lastname" formControlName="lastname" minlength="4" maxlength="10">
+   
+      <small *ngIf="Lastname.errors?.required && Lastname.touched">
+        Last Name is Required</small>
+      <small *ngIf="Lastname.errors?.minlength && Lastname.touched">
+        Last Name is Too Short...</small>
+      <small *ngIf="Lastname.errors?.maxlength &&  Lastname.touched">
+        Last Name is Too long...</small>
+  
+  </div>
+
+  <div class="row">
     <div class="col mb-3">
       <label for="email" class="form-label">Email:</label>
       <input type="email" class="form-control" id="email" formControlName="email">
-      <div class="form-text text-danger" *ngIf="!Email.valid && Email.touched">
-        <div *ngIf="Email.hasError('required')">Enter Email</div>
-        <div *ngIf="Email.hasError('email')">Enter correct Email</div>
-      </div>
-    </div>
-   <div class="row">
-   </div>
-    <div class="col mb-3">
-      <label for="mobile" class="form-label">Mobile Number :</label>
-      <input type="number" class="form-control" id="mobile" formControlName="mobile">
-      <div class="form-text text-danger" *ngIf="!Mobile.valid && Mobile.touched">
-        <div *ngIf="Mobile.hasError('required')">
-          Phone No Is REquire...</div>
-        <div *ngIf="Mobile.hasError('minLength')">
-          No Is is Too Short...</div>
-        <div *ngIf="Mobile.hasError('maxLength')">
-          No is Too long...</div>
-      </div>
-    </div>
-     <div class="col ps-3 mb-3">
-      <label class="m-1" for="gender">Gender :</label><br>
 
-      <div class=" form-check form-check-inline">
-        <input type="radio" class="form-check-input" value="m" id="male" formControlName="gender">
-        <label class="form-check-label" for="male">Male</label>
-     </div>
-     <div class=" form-check form-check-inline">
-        <input type="radio" class="form-check-input" value="f" id="female" formControlName="gender">
-        <label class="form-check-label" for="female">Female</label>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col mb-3">
-        <label for="city" Select Course>City</label>
-        <select class="from-control" id="city" formControlName="city">
-          <option value="Mumbai">Mumbai</option>
-          <option value="Kolkatta">Kolkatta</option>
-          <option value="Delhi">Delhi</option>
-        </select>
-      </div>
+      <small *ngIf="Email.errors?.required && Email.touched">Enter Email</small>
+      <small *ngIf="Email.errors?.email && Email.touched">Please Enter correct Email...</small>
     </div>
   </div>
- <div class="row">
+  <div class="row">
+  </div>
+  <div class="col mb-3">
+    <label for="mobile" class="form-label">Mobile Number :</label>
+    <input type="mobile" class="form-control" id="mobile" formControlName="mobile" range="[10,12]">
+   <!-- <small *ngIf="Mobile.errors?.required && Mobile.touched">Enter Mobile No..</small>-->
+    <small *ngIf="Mobile.errors?.required && Mobile.touched">Enret phone no...</small>
+    <small *ngIf="Mobile.errors?.pattern && Mobile.touched">Please Enter correct pattern digit...</small>
+   
+  </div>
+
+  <div class="col ps-3 mb-3">
+    <label class="m-1" for="gender">Gender :</label><br>
+
+    <div class=" form-check form-check-inline">
+      <input type="radio" class="form-check-input" value="m" id="male" formControlName="gender">
+      <label class="form-check-label" for="male">Male</label>
+    </div><br>
+    <div class=" form-check form-check-inline">
+      <input type="radio" class="form-check-input" value="f" id="female" formControlName="gender">
+      <label class="form-check-label" for="female">Female</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col mb-3">
+      <label for="city" Select Course>City</label>
+      <select class="from-control" id="city" formControlName="city">
+        <option value="Mumbai">Mumbai</option>
+        <option value="Kolkatta">Kolkatta</option>
+        <option value="Delhi">Delhi</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="row">
     <div class="col mb-3">
       <label for="pwd" class="form-label">Password</label>
       <input type="password" class="form-control" id="pwd" formControlName="pwd">
-      <div class="form-text text-danger" *ngIf="!Pwd.valid && Pwd.touched">
-        <div *ngIf="Pwd.hasError('required')">Please Enter Password</div>
-      </div>
-   </div>
-   <div class="col mb-3">
-      <label for="pwd" class="form-label">Confirm Password</label>
-      <input type="password" class="form-control" id="pwd" formControlName="pwd">
-      <div class="form-text text-danger" *ngIf="!Pwd.valid && Pwd.touched">
-        <div *ngIf="Pwd.hasError('required')">Enter Confirm Password</div>
+      <small *ngIf="Pwds.errors?.required && Pwds.touched">Enter Password</small>
+      <small *ngIf="Pwds.errors?.pattern && Pwds.touched">Entr Correct pattern..</small>
     </div>
-</div>
-</div>
+
+    <div class="col mb-3">
+      <label for="cwd" class="form-label">Confirm Password</label>
+      <input type="password" class="form-control" id="cwd" formControlName="cwd" >
+
+      <small *ngIf="Cwds.errors?.required && Cwds.touched">Enter Confirm Password</small>
+      <small *ngIf="Cwds.errors?.pattern && Cwds.touched">Confirm corrent password..</small>
+    </div>
+
+  </div>
   <div class="row">
     <div class="col-6 offset-3">
       <div class="d-grid">

@@ -28,11 +28,13 @@ ngOnInit(){
     Validators.pattern("[a-zA-Z].*")]),
    lastname: new FormControl('', [Validators.required, Validators.minLength(4),Validators.maxLength(5)]),
       email: new FormControl('',[Validators.required,Validators.email]),
-      mobile: new FormControl('',[Validators.required,Validators.minLength(10),Validators.maxLength(10),Validators.pattern("[0-9]*")]),
+      mobile: new FormControl('',[Validators.required,Validators.max(12),Validators.min(10),Validators.pattern("[0-9]*")]),
       city: new FormControl('Mumbai',[Validators.required]),
       gender: new FormControl('f',[Validators.required]),
-      pwd: new FormControl('',[Validators.required]),
-     
+      pwd: new FormControl('',[Validators.required,
+        Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}$')]),
+       cwd:new FormControl('',[Validators.required,
+        Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}$')]),
   })
   registerSubmitted(){
     console.log(this.registerform);
@@ -61,8 +63,11 @@ ngOnInit(){
   get Gender(){
     return this.registerform.get('gender') as FormControl;
   }
-  get Pwd(){
+  get Pwds(){
     return this.registerform.get('pwd') as FormControl;
+  }
+  get Cwds(){
+    return this.registerform.get('cwd') as FormControl;
   }
   }
 

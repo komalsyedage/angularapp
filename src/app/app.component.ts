@@ -48,6 +48,8 @@ export class AppComponent {
  }
  //uid:any;// numer sir take
  //demo="Hii Angular Developer";
-public uid:number;
- }
+
+   public uid:number;
+
+}
 
