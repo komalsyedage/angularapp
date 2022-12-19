@@ -17,7 +17,8 @@
                     <label for="email">Email address</label>
                     <input type="text"  id="email" class="form-control" formControlName="email" placeholder="Enter email" >
                  <small class="text-danger" *ngIf="!myReactiveForm.get('userDetails.email').valid && myReactiveForm.get('userDetails.email').touched">
-                    Please enter valid email
+                    <small *ngIf="myReactiveForm.get('userDetails.username').errors['required']">  Please enter valid email</small> 
+                   <small *ngIf="myReactiveForm.get('userDetails.username').errors['emailNotAllowed']">Email not allowed{{myReactiveForm.get('userDetails.email').value}}</small>
                  </small>
                 </div>
                 </div>
@@ -38,6 +39,15 @@
                     <label for="{{gender.id}}">{{gender.value}}</label>
                 </div>
                 </div>
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="number"  id="age" class="form-control" formControlName="age" placeholder="Enter age" 
+                    maxlength="18" minlength="20">
+                    <small *ngIf="myReactiveForm.get('age').invalid && myReactiveForm.get('age').touched">
+                       <small class="text-danger" *ngIf="myReactiveForm.get('age').errors['required']">Enter Age</small>
+                      
+                    </small>
+                    </div>
                 <div class="form-group" formArrayName="skills">
                     <label >Skills</label>
                     <ng-container *ngFor="let skill of this.myReactiveForm.get('skills').controls; index as i">
