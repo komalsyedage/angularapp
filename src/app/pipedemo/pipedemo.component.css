@@ -1,0 +1,16 @@
+.divi{
+    background-color: rgb(201, 201, 212);
+    margin-left: 200px;
+    padding-left: 300px;
+    width:800px;
+}
+h2{
+    color: crimson;
+    font-size: x-large;
+}
+h5{
+    color: blue;
+}
+strong{
+    font-size: medium;
+}

@@ -1,7 +1,45 @@
-<p>pipedemo works!</p>
-<div>
-    Today's Data:{{todaysDate | date:'fullDate' | uppercase}}
+
+<div class="divi">
+    <h2>Date :</h2>
+     <strong>1.Today's Date: </strong> <h5>=>{{todaysDate | date}}</h5>
+     <strong>2.Date in M/dd/yyyy:</strong> <h5>=>{{todaysDate | date:'M/dd/yyyy'}}</h5>
+     <strong>3.Short Date:</strong><h5>=>{{todaysDate | date:'shortDate'}}</h5>
+     <strong>4.Full Date:</strong> <h5>=>{{todaysDate | date:'fullDate' }}</h5>
+     <div>
+        <h2>chain :</h2>
+        <strong>5.UpperCase:</strong><h5>=>{{todaysDate | date:'fullDate' | uppercase}}</h5> <!--chain pipe-->
+        <strong>6.LowerCase:</strong><h5>=>{{todaysDate | date:'fullDate' | lowercase}}</h5><!--chain pipe-->
+   
+     </div>
+    
+<div class="divi1">
+    <h2>Async :</h2>
+   <strong>String:</strong><h5>=>{{obser| async }}</h5><!--if data comes in observable then async 
+        file subscribe to an observable and retun transmitted value-->
 </div>
-<!-- <div>
-    Price:{{price | 'count' }}
-</div>   -->
+
+<div class="divi1">
+    <h2>Currency :</h2>
+   <strong>price in number:</strong><h5>=>{{price }}</h5>
+   <strong>Indian price :</strong><h5>=>{{price | currency :'INR'}}</h5>
+   <strong>USA Price:</strong><h5>=>{{price | currency:'USD'}}</h5>
+   <strong>Euro Price:</strong><h5>=>{{price | currency:'EUR'}}</h5>
+  
+</div>
+
+<div class="divi1">
+    <h2>JSON :</h2>
+   <strong>id name:</strong><h5>=>{{obj | json }}</h5>
+   
+  
+</div>
+<div class="divi1">
+    <h2>custome :</h2>
+   <strong>count *80000 length:</strong><h5>=>{{price | count }}</h5>
+   <strong>komal length:</strong><h5>=>{{name | count }}</h5>
+   
+  
+</div>
+
+  
+</div>

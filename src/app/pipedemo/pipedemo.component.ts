@@ -10,9 +10,13 @@ import { UtilityService } from '../services/utility.service';
 export class PipedemoComponent implements OnInit {
 todaysDate=new Date();
 price:number=80000;
+name:string='komal'
+//p:number=56.98;
+obj={id:'1',name:'test'}
 obser;
   constructor(private _utilityService: UtilityService) { 
-    this.obser=this._utilityService.userName
+    this.obser=this._utilityService.userName;
+
   }
 
   ngOnInit() {

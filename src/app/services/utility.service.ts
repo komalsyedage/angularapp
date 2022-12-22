@@ -5,11 +5,15 @@ import { BehaviorSubject, Subject } from 'rxjs';
   providedIn: 'root' //service ko apply kr sakte ho
 })
 export class UtilityService {
+// uname='mm'; 
+ userName=new BehaviorSubject ('Angular UI Developer');//bydefault value add
+//userName=new Subject<any>();
+  constructor() {
   
-
-// userName=new BehaviorSubject ('Angular UI Developer');//bydefault value add
-userName=new Subject<any>();
-  constructor(private _utilityService: UtilityService) {
-  
+   }
+   getData(){
+    this.userName.subscribe(res=>{
+      
+    })
    }
 }
