@@ -32,6 +32,14 @@ import { TFormAssignmentComponent } from './tform-assignment/tform-assignment.co
 import { RFormvalidationComponent } from './rformvalidation/rformvalidation.component';
 import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 import { SFormComponent } from './s-form/s-form.component';
+import { Servicecomp1Component } from './servicecomp1/servicecomp1.component';
+import { Servicecomp2Component } from './servicecomp2/servicecomp2.component';
+import { HttpClientModule} from '@angular/common/http';
+import { AsRformComponent } from './as-rform/as-rform.component';
+import { Comp1Component } from './comp1/comp1.component';
+import { Comp2Component } from './comp2/comp2.component';
+import { Comp3Component } from './comp3/comp3.component';
+import { Comp4Component } from './comp4/comp4.component';
 
 
 
@@ -66,7 +74,14 @@ import { SFormComponent } from './s-form/s-form.component';
     RFormvalidationComponent,
     ReactiveformComponent,
     ReactiveformComponent,
-    SFormComponent
+    SFormComponent,
+    Servicecomp1Component,
+    Servicecomp2Component,
+    AsRformComponent,
+    Comp1Component,
+    Comp2Component,
+    Comp3Component,
+    Comp4Component
     
     
   ],
@@ -74,7 +89,9 @@ import { SFormComponent } from './s-form/s-form.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+   
   //form control for two way databinding form
    
   ],

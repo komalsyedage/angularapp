@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormArray, FormControl, FormGroup, Validators ,FormBuilder} from '@angular/forms';
 import { Observable } from 'rxjs';
 
 
@@ -22,7 +22,7 @@ export class ReactiveformComponent implements OnInit {
     }
   ]
   myReactiveForm: FormGroup;
-  constructor() { 
+  constructor(private _fb:FormBuilder) { 
     this.createForm();
   }
 
@@ -50,18 +50,29 @@ export class ReactiveformComponent implements OnInit {
   }
 
   createForm(){
-    this.myReactiveForm = new FormGroup({
-      'userDetails': new FormGroup({
-        'username': new FormControl('', [Validators.required, this.NaNames.bind(this)]),
-        'email': new FormControl('', [Validators.required, Validators.email], this.NaEmails)
+    // this.myReactiveForm = new FormGroup({
+    //   'userDetails': new FormGroup({
+    //     'username': new FormControl('', [Validators.required, this.NaNames.bind(this)]),
+    //     'email': new FormControl('', [Validators.required, Validators.email], this.NaEmails)
+    //   }),
+    //   'course': new FormControl(''),
+    //   'age':new FormControl('',Validators.required),
+    //   'gender': new FormControl(''),
+    //   'skills': new FormArray([
+    //    new FormControl(null, Validators.required)
+    //   ])
+    // })
+    this.myReactiveForm = this._fb.group({
+      userDetails: this._fb.group({
+        username: ['', Validators.required],
+        email: ['', Validators.required]
       }),
-      'course': new FormControl(''),
-      'age':new FormControl('',Validators.required),
-      'gender': new FormControl(''),
-      'skills': new FormArray([
-       new FormControl(null, Validators.required)
-      ])
+      course: ['Angular'],
+      gender: ['Male'],
+      age:['',Validators.required],
+      skills: this._fb.array([])
     })
+
   }
   OnSubmit()
   {
@@ -69,9 +80,7 @@ export class ReactiveformComponent implements OnInit {
     console.log(this.myReactiveForm);
     
   }
-  OnAddSkills() {
-   (<FormArray>this.myReactiveForm.get('skills')).push(new FormControl(null, Validators.required));
-  }
+  
   NaNames(control:FormControl)
   {  
     //  this.notAllowedNames=   api/getNams 
@@ -92,7 +101,12 @@ export class ReactiveformComponent implements OnInit {
     })
     return myResponse;
   }
-
+  OnAddSkills() {
+    (<FormArray>this.myReactiveForm.get('skills')).push(new FormControl(null, Validators.required));
+   }
+  Ondelete(i){
+    (<FormArray>this.myReactiveForm.get('skills')).removeAt(i)
+    }
+ 
   
-
 }

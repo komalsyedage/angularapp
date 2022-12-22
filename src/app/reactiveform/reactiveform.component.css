@@ -27,7 +27,7 @@ input.ng-invalid.ng-touched {
     background-repeat: no-repeat;
     background-size: cover;
 
-    border: 4px solid chartreuse;
+    border: 4px solid rgb(6, 12, 0);
 }
 label{
     color: black;

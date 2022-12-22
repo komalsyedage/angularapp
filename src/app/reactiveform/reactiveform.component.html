@@ -8,7 +8,7 @@
 
         <input type="text" class="form-control"  id="username" formControlName="username" placeholder="Enter user name " >
         <small class="text-danger" *ngIf="!myReactiveForm.get('userDetails.username').valid && myReactiveForm.get('userDetails.username').touched">
-                        <small *ngIf="myReactiveForm.get('userDetails.username').errors['required']">Please enter user name</small>
+   <small *ngIf="myReactiveForm.get('userDetails.username').errors['required']">Please enter user name</small>
                         <small *ngIf="myReactiveForm.get('userDetails.username').errors['namesNotAllowed']">
                             User name not allowed {{myReactiveForm.get('userDetails.username').value}}</small>
                     </small>
@@ -18,7 +18,8 @@
                     <input type="text"  id="email" class="form-control" formControlName="email" placeholder="Enter email" >
                  <small class="text-danger" *ngIf="!myReactiveForm.get('userDetails.email').valid && myReactiveForm.get('userDetails.email').touched">
                     <small *ngIf="myReactiveForm.get('userDetails.username').errors['required']">  Please enter valid email</small> 
-                   <small *ngIf="myReactiveForm.get('userDetails.username').errors['emailNotAllowed']">Email not allowed{{myReactiveForm.get('userDetails.email').value}}</small>
+                   <small *ngIf="myReactiveForm.get('userDetails.username').errors['emailNotAllowed']">
+                    Email not allowed{{myReactiveForm.get('userDetails.email').value}}</small>
                  </small>
                 </div>
                 </div>
@@ -53,7 +54,10 @@
                     <ng-container *ngFor="let skill of this.myReactiveForm.get('skills').controls; index as i">
                         <input type="text" class="form-control mt-2" formControlName="{{i}}" placeholder="Add Skills">
                     </ng-container>
-                    <button class="btn btn-light btn-sm mt-4 btn-add" (click)="OnAddSkills()"><i>+</i> Add Skills</button>
+                    <button class="btn btn-light btn-sm mt-4 btn-add" 
+                    (click)="OnAddSkills(i)"><i>+</i> Add Skills</button><br>
+                    <button  (click)="Ondelete(skills)" 
+                    type="button" class="btn btn-danger mt-4">Delete</button>
                 </div>
                 <button class="btn btn-success mt-4">Submit</button>
             </form>

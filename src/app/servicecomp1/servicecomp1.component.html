@@ -1,0 +1,32 @@
+
+<!--<button (click)="Onsubscribe()">Subscribe</button>
+<ng-container *ngFor="let product of products">
+    product Id:<strong class="text-success">{{product.Id}}</strong>
+    Product Name:<strong class="text-success">{{product.name}}</strong>
+<br>
+</ng-container>-->
+
+<div style="text-align:center;">
+    <h2>API DATA</h2>
+    <table border="1">
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>User Name</th>
+        <th>Email</th>
+        <th>Phone No.</th>
+        <th>Address</th>
+        <th>Company</th>
+        <th>website</th>
+       </tr>
+       <tr *ngFor="let user of apiData">
+        <td>{{user.id}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.username}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.address}}</td>
+        <td>{{user.company}}</td>
+        <td>{{user.website}}</td>
+       </tr>
+    </table>
+    </div> 
