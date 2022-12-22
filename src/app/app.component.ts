@@ -8,11 +8,28 @@ import { DemoService } from './services/demo.service';
 })
 
 export class AppComponent implements OnInit{
+Data:any=[];
+constructor(private _demoService: DemoService){//instance provde angular
+  //  this._demoService.getuserData().subscribe(data=>{
+   
+  //   this.userdata=data;
+  //   console.log(data);
+    
+   }
 
-  constructor(private _demoService: DemoService){//instance provde angular
+   ngOnInit(): void {
+         this._demoService.getUsersData().subscribe(data=> {
+          console.log('getting data from api', data);
+          this.Data=data;
+      
+    })
+  }
+
+
+  
    
   }
-  ngOnInit(): void {
+  //ngOnInit(): void {
    //call only once coomponent inetialize hone kebad call
   //  this._demoService.getUsersData().subscribe(data => {
   //   console.log('getting data from Api', data);
@@ -25,7 +42,7 @@ export class AppComponent implements OnInit{
       
     //})
   //  })
-  }
+  
  
 
 //   name:any="Codemind Tecnology"
@@ -72,5 +89,5 @@ export class AppComponent implements OnInit{
 
 //    public uid:number;
 
-}
+
 

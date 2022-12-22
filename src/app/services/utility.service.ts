@@ -7,7 +7,7 @@ import { BehaviorSubject, Subject } from 'rxjs';
 export class UtilityService {
   
 
- // userName=new BehaviorSubject ('Angular UI Developer');//bydefault value add
+// userName=new BehaviorSubject ('Angular UI Developer');//bydefault value add
 userName=new Subject<any>();
   constructor(private _utilityService: UtilityService) {
   

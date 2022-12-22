@@ -10,16 +10,24 @@ export class Comp3Component implements OnInit {
   userName;
   constructor(private _utilityService: UtilityService) { 
     this._utilityService.userName.subscribe( res => {
-   this.userName = res})
+   this.userName = res;
+   console.log(res)})
    
     }
   ngOnInit() {}
 
   updateUserName(uname){
-    console.log(uname.value);
-    this._utilityService.userName.next(uname.value)
+    // console.log(uname.value);
+    // this._utilityService.userName.next(uname.value)
     //next method is used to send message to an bservable i.e userName
-    
+    let emp ={
+      id:100,
+      Name:'Rajni',
+      Section:'section 3',
+      MobileNo:'7688776655'
+        
+      }
+      this._utilityService.userName.next(JSON.stringify(emp))
+    }
 
-}
 }

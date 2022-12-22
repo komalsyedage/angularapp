@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class DemoService {
-  apiURL ='https://jsonplaceholder.typicode.com/';//fake API  url backend
+  apiURL ='https://jsonplaceholder.typicode.com/users';//fake API  url backend
  
   // display(){
   //   alert('subscribed successfully')
@@ -21,12 +21,17 @@ export class DemoService {
 constructor(private http: HttpClient)//server se data lena DI=inject kel provide angular
 { }
 
-getUsersData():Observable<any>{
-  let users='user'
+// getuserData(){
+//   let apiurl="https://jsonplaceholder.typicode.com/users";
+//   return this.http.get(apiurl);
+//  }
+
+getUsersData(){
+ // let users='user'
   return this.http.get(this.apiURL); //data get 
 }
-getposts(){
-   let posts='posts';
-   return this.http.get(this.apiURL + posts);
- }
+// getposts(){
+//    let posts='posts';
+//    return this.http.get(this.apiURL + posts);
+//  }
 }

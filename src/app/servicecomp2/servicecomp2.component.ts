@@ -12,7 +12,7 @@ export class Servicecomp2Component implements OnInit {
 
   ngOnInit() {
   }
-  Onsubscribe(){
-  this._demoService.display();
-  }
+  // Onsubscribe(){
+  // this._demoService.display();
+  // }
 }
