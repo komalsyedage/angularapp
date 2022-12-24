@@ -7,7 +7,7 @@ import { DemoService } from './services/demo.service';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 
-export class AppComponent implements OnInit{
+export class AppComponent {
 Data:any=[];
 constructor(private _demoService: DemoService){//instance provde angular
   //  this._demoService.getuserData().subscribe(data=>{
@@ -17,18 +17,25 @@ constructor(private _demoService: DemoService){//instance provde angular
     
    }
 
-   ngOnInit(): void {
-         this._demoService.getUsersData().subscribe(data=> {
-          console.log('getting data from api', data);
-          this.Data=data;
+// get(){
+//   this._demoService.getuseData().subscribe(data=>{
+//     console.log(data);
+//     this.Data=data;
+    
+//   })
+}
+  //  ngOnInit(): void {
+  //        this._demoService.getuserData().subscribe(data=> {
+  //         console.log('getting data from api', data);
+  //         this.Data=data;
       
-    })
-  }
+  //   })
+  
 
 
   
    
-  }
+  
   //ngOnInit(): void {
    //call only once coomponent inetialize hone kebad call
   //  this._demoService.getUsersData().subscribe(data => {

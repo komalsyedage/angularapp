@@ -1,37 +1,37 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DemoService {
-  apiURL ='https://jsonplaceholder.typicode.com/users';//fake API  url backend
- 
-  // display(){
-  //   alert('subscribed successfully')
-  // }
+  getPosts() {
+    throw new Error('Method not implemented.');
+  }
 
-//   products=[
-//   {name:'Laptop',Id:'101'},
-//   {name:'Tv',Id:'102'},
-//   {name:'Mobile',Id:'104'}
-// ]
+  // apiURL = 'https://jsonplaceholder.typicode.com/users';
+  apiURL = 'https://jsonplaceholder.typicode.com/';
 
-constructor(private http: HttpClient)//server se data lena DI=inject kel provide angular
-{ }
+  products = [
+    {name: 'Laptop', id:'101'},
+    {name: 'TV', id:'102'},
+    {name: 'Mobile', id:'103'},
 
-// getuserData(){
-//   let apiurl="https://jsonplaceholder.typicode.com/users";
-//   return this.http.get(apiurl);
-//  }
+  ]
+  constructor(private http: HttpClient) { }
 
-getUsersData(){
- // let users='user'
-  return this.http.get(this.apiURL); //data get 
-}
-// getposts(){
-//    let posts='posts';
-//    return this.http.get(this.apiURL + posts);
-//  }
+  display(){
+    alert('Subscribed successfully');
+  }
+
+  getUsersData()
+  {
+    let users = 'users';
+   return  this.http.get(this.apiURL+ users);
+    
+  }
+  getDataPosts(){
+    let posts = 'posts';
+    return this.http.get(this.apiURL+ posts);
+  }
 }
