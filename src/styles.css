@@ -101,3 +101,22 @@ h2{
   padding: 20px;
   height: 1500px;
 } */
+header{
+  color: black;
+  font-size: x-large;
+  font-weight: 400;
+  font-family: sans-serif;
+  margin-left: 80px;
+  margin-right: 1000px;
+  background-color: rgb(230, 216, 212);
+}
+.nav-link:hover{
+  color:rgb(216, 32, 69);
+  background-color: cornflowerblue;
+  font-family: fantasy;
+  font-weight: 500;
+}
+.nav-link{
+ 
+  color: rgb(182, 55, 81);
+}

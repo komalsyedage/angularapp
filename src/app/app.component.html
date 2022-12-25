@@ -104,7 +104,7 @@
 <!--<app-pipedemo></app-pipedemo>-->
 <!--<app-filterpipe></app-filterpipe>-->
 <!-- 
-<router-outlet></router-outlet>-->
+-->
 <!--<button (click)="get()">Get Data</button>
 <div class="col-md mt-4 mb-4">
   <table class="table table-bordered">
@@ -124,4 +124,21 @@
     </tbody>
   </table>
 </div>-->
-<app-servicecomp1></app-servicecomp1>
+<!--<app-servicecomp1></app-servicecomp1>-->
+<header>
+  <nav>
+    <ul class="nav nav-tabs">
+      <li class="nav-items"><a class="nav-link" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"
+          routerLink="home/">Home</a></li>
+      <li class="nav-items"><a class="nav-link" routerLinkActive="active" routerLink="aboutus/">About Us</a></li>
+      <li class="nav-items"><a class="nav-link" routerLinkActive="active myclass" routerLink="product">Product</a></li>
+
+      <li class="nav-items"><a class="nav-link" routerLinkActive="active myclass" routerLink="gallery">Gallery</a></li>
+      <li class="nav-items"><a class="nav-link" routerLinkActive="active myclass" routerLink="login">Login</a></li>
+      <li class="nav-items"><a class="nav-link" routerLinkActive="active myclass" routerLink="news">News</a></li>
+      <li class="nav-items"><a class="nav-link" routerLinkActive="active myclass" routerLink="admission">Admission</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+<router-outlet></router-outlet>

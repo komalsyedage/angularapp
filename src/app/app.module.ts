@@ -46,6 +46,14 @@ import { FilterpipeComponent } from './filterpipe/filterpipe.component';
 import { FilterPipe } from './filter.pipe';
 import { CustomPipe } from './custom.pipe';
 import { Servicecomp1Component } from './servicecomp1/servicecomp1.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { ProductComponent } from './product/product.component';
+import { ContactusComponent } from './contactus/contactus.component';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
+import { NewsComponent } from './news/news.component';
+import { GalleryComponent } from './gallery/gallery.component';
+import { AdmissionComponent } from './admission/admission.component';
 
 
 
@@ -92,7 +100,15 @@ import { Servicecomp1Component } from './servicecomp1/servicecomp1.component';
     FilterpipeComponent,
     FilterPipe,
     CustomPipe,
-    Servicecomp1Component
+    Servicecomp1Component,
+    AboutusComponent,
+    ProductComponent,
+    ContactusComponent,
+    HomeComponent,
+    LoginComponent,
+    NewsComponent,
+    GalleryComponent,
+    AdmissionComponent
     
     
   ],
