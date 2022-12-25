@@ -120,3 +120,21 @@ header{
  
   color: rgb(182, 55, 81);
 }
+form{
+  margin-left: 80px;
+  margin-right: 1000px;
+
+}
+label{
+  font-family: monospace;
+  font-weight: 700;
+  font-size: x-large;
+}
+.m-1{
+  font-family: monospace;
+  font-weight: 700;
+  font-size: x-large;
+}
+.form-control{
+  background-color: rgb(188, 245, 245);
+}

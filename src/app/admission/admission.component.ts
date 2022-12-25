@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-admission',
@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./admission.component.css']
 })
 export class AdmissionComponent implements OnInit {
-
+  
+@Input() user:string;
   constructor() { }
 
   ngOnInit() {

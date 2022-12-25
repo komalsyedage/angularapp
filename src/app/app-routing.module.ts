@@ -11,7 +11,7 @@ import { ProductComponent } from './product/product.component';
 
 
 const routes: Routes = [
-  {path: '' , redirectTo: 'login', pathMatch: 'full'},
+  { path: '' , redirectTo: 'login', pathMatch: 'full'},
   { path:'home', component: HomeComponent},
   { path:'aboutus', component: AboutusComponent},// localhost://4200/aboutus
   { path:'product', component: ProductComponent}, // localhost://4200/product

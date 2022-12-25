@@ -5,9 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class DemoService {
-  getPosts() {
-    throw new Error('Method not implemented.');
-  }
+
 
   // apiURL = 'https://jsonplaceholder.typicode.com/users';
   apiURL = 'https://jsonplaceholder.typicode.com/';
@@ -27,7 +25,8 @@ export class DemoService {
   getUsersData()
   {
     let users = 'users';
-   return  this.http.get(this.apiURL+ users);
+    return this.http.get(this.apiURL+ users)
+  // OR return  this.http.get(this.apiURL);
     
   }
   getDataPosts(){

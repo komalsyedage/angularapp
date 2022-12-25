@@ -23,7 +23,7 @@ constructor(private _demoService: DemoService){//instance provde angular
 //     this.Data=data;
     
 //   })
-}
+
   //  ngOnInit(): void {
   //        this._demoService.getuserData().subscribe(data=> {
   //         console.log('getting data from api', data);
@@ -95,6 +95,7 @@ constructor(private _demoService: DemoService){//instance provde angular
 //  //demo="Hii Angular Developer";
 
 //    public uid:number;
+atri:string='Angular Developer'
 
-
+}
 
