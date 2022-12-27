@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -8,7 +9,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _route: Router) { }//for checkuser
 
   ngOnInit() {
   }
@@ -27,4 +28,14 @@ registerSubmit(){
   console.log(this.registerForm);
   
 }
+checkUser(firstname,lastname,email,
+  mobile,gender,pwd,rwd){
+    if(firstname== 'admin' && pwd== 'admin')
+    {
+      this._route.navigate(['product/laptop']);
+    }
+    
+
+}
+
 }

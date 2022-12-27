@@ -106,8 +106,7 @@ header{
   font-size: x-large;
   font-weight: 400;
   font-family: sans-serif;
-  margin-left: 80px;
-  margin-right: 1000px;
+ 
   background-color: rgb(230, 216, 212);
 }
 .nav-link:hover{
@@ -118,12 +117,7 @@ header{
 }
 .nav-link{
  
-  color: rgb(182, 55, 81);
-}
-form{
-  margin-left: 80px;
-  margin-right: 1000px;
-
+  color: rgb(23, 4, 44);
 }
 label{
   font-family: monospace;

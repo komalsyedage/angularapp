@@ -54,6 +54,12 @@ import { LoginComponent } from './login/login.component';
 import { NewsComponent } from './news/news.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { AdmissionComponent } from './admission/admission.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { LaptopComponent } from './product/laptop/laptop.component';
+import { TabletComponent } from './product/tablet/tablet.component';
+import { TVComponent } from './product/tv/tv.component';
+import { WashingmachineComponent } from './product/washingmachine/washingmachine.component';
+
 
 
 
@@ -108,7 +114,12 @@ import { AdmissionComponent } from './admission/admission.component';
     LoginComponent,
     NewsComponent,
     GalleryComponent,
-    AdmissionComponent
+    AdmissionComponent,
+    PagenotfoundComponent,
+    LaptopComponent,
+    TabletComponent,
+    TVComponent,
+    WashingmachineComponent,
     
     
   ],

@@ -1,0 +1,10 @@
+.container{
+    padding-right: 400px;
+   
+}
+li{
+    list-style: none;
+    color: blue;
+    font-size: medium;
+    font-weight: 700;
+}
