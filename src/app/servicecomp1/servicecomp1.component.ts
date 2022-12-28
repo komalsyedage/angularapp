@@ -8,7 +8,7 @@ import { DemoService } from '../services/demo.service';
 })
 export class Servicecomp1Component implements OnInit {
 
-  productss= [{ }];
+  productss= [{}];
   apiData: any= [{}];
   constructor(private _demoService: DemoService) { }
 

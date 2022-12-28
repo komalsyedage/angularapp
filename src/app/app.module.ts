@@ -13,7 +13,7 @@ import { NgswitchComponent } from './ngswitch/ngswitch.component';
 import { NgifForSwitchComponent } from './ngif-for-switch/ngif-for-switch.component';
 
 import { AttriComponent } from './attri/attri.component';
-import { CustdirDirective } from './custdir.directive';
+
 import { DemoComponent } from './demo/demo.component';
 import { HooksComponent } from './hooks/hooks.component';
 import { DirassignComponent } from './dirassign/dirassign.component';
@@ -55,10 +55,14 @@ import { NewsComponent } from './news/news.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { AdmissionComponent } from './admission/admission.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
-import { LaptopComponent } from './product/laptop/laptop.component';
-import { TabletComponent } from './product/tablet/tablet.component';
-import { TVComponent } from './product/tv/tv.component';
-import { WashingmachineComponent } from './product/washingmachine/washingmachine.component';
+
+
+import { DemopostComponent } from './demopost/demopost.component';
+
+import { PostdetailsComponent } from './postdetails/postdetails.component';
+import { ProductModule } from './product/product.module';
+import { UtilityModule } from './models/utility.module';
+//import { CustdirDirective } from './custdir.directive';
 
 
 
@@ -75,7 +79,7 @@ import { WashingmachineComponent } from './product/washingmachine/washingmachine
     NgifForSwitchComponent,
   
     AttriComponent,
-    CustdirDirective,
+   // CustdirDirective,
     DemoComponent,
     HooksComponent,
     DirassignComponent,
@@ -116,19 +120,25 @@ import { WashingmachineComponent } from './product/washingmachine/washingmachine
     GalleryComponent,
     AdmissionComponent,
     PagenotfoundComponent,
-    LaptopComponent,
-    TabletComponent,
-    TVComponent,
-    WashingmachineComponent,
+   
+    DemopostComponent,
+    
+    PostdetailsComponent,
     
     
   ],
   imports: [
+   
     BrowserModule,
+    ProductModule,
+    UtilityModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+   
+   
+   // ProductComponent
    
   //form control for two way databinding form
    

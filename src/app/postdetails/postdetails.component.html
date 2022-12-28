@@ -1,0 +1,107 @@
+ <p>psotdetails works!</p>
+
+<div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th> UserID</th>
+          <th> Id</th>
+          <th> Title</th>
+          <th> Body</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{arrPosts.userId}}</td>
+          <td>{{arrPosts.id}}</td>
+          <td>{{arrPosts.title}}</td>
+          <td>{{arrPosts.body}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div><hr>
+  <div>
+     <!-- <h4> Please click on the below button open popup</h4>
+    <hr>  
+    <button style="margin:40px; padding:10px;" type="button" class="btn btn-primary" (click)="openPopup()"> Show Data</button>
+    <div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display':displayStyle}">
+    <div class="modal-dialog" role="document">
+    <div class="modal-header">
+    
+    </div>
+    <br>
+    <div class="col-md-12 text-left rounded shadow py-5">
+      <h5 class="modal-title">Post API Data </h5>
+    
+    <div class="modal-body">
+      <div class="container">
+    <div class="row justify-content-center">
+     
+          <table class="table">
+            <thead>
+              <tr>
+                <th> UserID</th>
+                <th> Id</th>
+                <th> Title</th>
+                <th> Body</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>{{arrPosts.userId}}</td>
+                <td>{{arrPosts.id}}</td>
+                <td>{{arrPosts.title}}</td>
+                <td>{{arrPosts.body}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    
+    </div>
+    <div class="modal-footer">
+    <button type="button" class="btn btn-danger" (click)="closePopup()"> Close </button>
+    </div>
+    </div>
+    </div>
+    </div> -->
+  <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter"
+(click)="openModal()">Show Data</button>
+
+<div class="modal fade bd-example-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Post Details</h5>
+        </div>
+        <div class="modal-body">
+            <div>
+                <table class="table border bg-secondary ">
+                    <thead>
+                        <tr class="text-white">
+                            <th style="text-align: center;">UserID</th>
+                            <th style="text-align: center;">ID</th>
+                            <th style="text-align: center;">Title</th>
+                            <th style="text-align: center;">Body</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                      <tr style="background-color: rgb(225, 223, 221);">
+                      <td style="line-height: 10vh;">{{arrPosts.userId}}</td>
+                      <td style="line-height: 10vh;">{{arrPosts.id}}</td>
+                      <td>{{arrPosts.title}}</td>
+                      <td>{{arrPosts.body}}</td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+  </div>
+  <div class="modal-footer">
+      <button type="button" class="btn btn-primary" (click)="closeModal()">Close</button>
+  </div>
+</div>
+</div>
+</div>

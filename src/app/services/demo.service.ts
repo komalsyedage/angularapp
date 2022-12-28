@@ -8,7 +8,7 @@ export class DemoService {
 
 
   // apiURL = 'https://jsonplaceholder.typicode.com/users';
-  apiURL = 'https://jsonplaceholder.typicode.com/';
+  apiURL = 'https://jsonplaceholder.typicode.com/'; //hardcoded URL
 
   products = [
     {name: 'Laptop', id:'101'},
