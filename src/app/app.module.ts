@@ -62,6 +62,9 @@ import { DemopostComponent } from './demopost/demopost.component';
 import { PostdetailsComponent } from './postdetails/postdetails.component';
 import { ProductModule } from './product/product.module';
 import { UtilityModule } from './models/utility.module';
+
+
+import { ElectronicsModule } from './electronics/electronics.module';
 //import { CustdirDirective } from './custdir.directive';
 
 
@@ -126,11 +129,14 @@ import { UtilityModule } from './models/utility.module';
     PostdetailsComponent,
     
     
+    
+    
   ],
   imports: [
    
     BrowserModule,
     ProductModule,
+    ElectronicsModule,
     UtilityModule,
     AppRoutingModule,
     FormsModule,

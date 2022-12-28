@@ -5,6 +5,11 @@ import { AdmissionComponent } from './admission/admission.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { DemoComponent } from './demo/demo.component';
 import { DemopostComponent } from './demopost/demopost.component';
+import { ArduinoComponent } from './electronics/arduino/arduino.component';
+import { BuzzerComponent } from './electronics/buzzer/buzzer.component';
+import { ElectronicsComponent } from './electronics/electronics.component';
+import { MicrochipComponent } from './electronics/microchip/microchip.component';
+import { RasberrypiComponent } from './electronics/rasberrypi/rasberrypi.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { HomeComponent } from './home/home.component';
 
@@ -39,6 +44,7 @@ const routes: Routes = [
   { path: 'admission',component: AdmissionComponent},
   { path: 'post', component: DemopostComponent }, 
   { path: 'postdetails/:id', component: PostdetailsComponent},
+  
   { path:'**',component: PagenotfoundComponent}// wild card page not found if url is wrong
 ];
 
