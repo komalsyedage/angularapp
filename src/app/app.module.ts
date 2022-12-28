@@ -65,6 +65,8 @@ import { UtilityModule } from './models/utility.module';
 
 
 import { ElectronicsModule } from './electronics/electronics.module';
+import { ElerasDirective } from './eleras.directive';
+import { ElerasberyModule } from './models/elerasbery.module';
 //import { CustdirDirective } from './custdir.directive';
 
 
@@ -128,6 +130,8 @@ import { ElectronicsModule } from './electronics/electronics.module';
     
     PostdetailsComponent,
     
+   // ElerasDirective,
+    
     
     
     
@@ -135,13 +139,14 @@ import { ElectronicsModule } from './electronics/electronics.module';
   imports: [
    
     BrowserModule,
-    ProductModule,
+    ProductModule,//add mai module se first
     ElectronicsModule,
     UtilityModule,
-    AppRoutingModule,
+    AppRoutingModule,// main module
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    ElerasberyModule
    
    
    // ProductComponent

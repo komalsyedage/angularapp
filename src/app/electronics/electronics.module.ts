@@ -7,6 +7,8 @@ import { MicrochipComponent } from './microchip/microchip.component';
 import { RasberrypiComponent } from './rasberrypi/rasberrypi.component';
 import { BuzzerComponent } from './buzzer/buzzer.component';
 
+import { ElerasberyModule } from '../models/elerasbery.module';
+
 
 const products: Routes =[
   { path: 'electronics' ,component:ElectronicsComponent, children: [
@@ -21,12 +23,14 @@ const products: Routes =[
     ArduinoComponent,
     MicrochipComponent,
     RasberrypiComponent,
-    BuzzerComponent
+    BuzzerComponent,
+   // ElerasDirective
   ],
   imports: [
     CommonModule,
     RouterModule.forChild(products),
+    ElerasberyModule
   ],
-  exports: [RouterModule]
+  exports: [RouterModule,]
 })
 export class ElectronicsModule { }

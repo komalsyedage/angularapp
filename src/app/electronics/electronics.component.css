@@ -7,8 +7,9 @@
 } */
 .card{
     display:inline-block;
+   
     margin: 15px 10px 10px;
    width: 45%;
    height:45%;
-    border: 2cm solid rgb(26, 10, 121)
+    border: 3px solid rgb(26, 10, 121)
 }
