@@ -9,7 +9,7 @@ import { ProductComponent } from './product.component';
 import { UtilityModule } from '../models/utility.module';
 
 const prodRoutes : Routes =[
-  {path:'product', component: ProductComponent,children: [//http://localhost:4200/product
+  {path:'', component: ProductComponent,children: [//http://localhost:4200/product
   {path:'laptop',component: LaptopComponent},
   {path:'tablet',component: TabletComponent},//http://localhost:4200/tablet
   {path:'tv',component: TVComponent},
@@ -18,7 +18,8 @@ const prodRoutes : Routes =[
 ;
 
 @NgModule({
-  declarations: [// feature module we say
+  declarations: [
+    ProductComponent,// feature module we say
     LaptopComponent,
     TVComponent,
     TabletComponent,
@@ -32,4 +33,9 @@ const prodRoutes : Routes =[
   exports: [RouterModule,
     UtilityModule]
 })
-export class ProductModule { }
+export class ProductModule {
+  constructor(){
+    console.log('Product Module called');
+    
+  }
+ }

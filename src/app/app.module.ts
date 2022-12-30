@@ -60,13 +60,16 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { DemopostComponent } from './demopost/demopost.component';
 
 import { PostdetailsComponent } from './postdetails/postdetails.component';
-import { ProductModule } from './product/product.module';
+
 import { UtilityModule } from './models/utility.module';
 
 
 import { ElectronicsModule } from './electronics/electronics.module';
-import { ElerasDirective } from './eleras.directive';
+
 import { ElerasberyModule } from './models/elerasbery.module';
+import { AdduserComponent } from './adduser/adduser.component';
+
+
 //import { CustdirDirective } from './custdir.directive';
 
 
@@ -117,7 +120,6 @@ import { ElerasberyModule } from './models/elerasbery.module';
     CustomPipe,
     Servicecomp1Component,
     AboutusComponent,
-    ProductComponent,
     ContactusComponent,
     HomeComponent,
     LoginComponent,
@@ -125,23 +127,20 @@ import { ElerasberyModule } from './models/elerasbery.module';
     GalleryComponent,
     AdmissionComponent,
     PagenotfoundComponent,
-   
     DemopostComponent,
-    
     PostdetailsComponent,
+    AdduserComponent,
     
    // ElerasDirective,
-    
-    
-    
-    
-  ],
+   ],
+  
   imports: [
    
     BrowserModule,
-    ProductModule,//add mai module se first
+   // ProductModule ,
+    //OrdersModule ,//add mai module se first
     ElectronicsModule,
-    UtilityModule,
+   // UtilityModule,
     AppRoutingModule,// main module
     FormsModule,
     ReactiveFormsModule,
@@ -157,5 +156,10 @@ import { ElerasberyModule } from './models/elerasbery.module';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  constructor(){
+    console.log('App Module Called');
+    
+  }
+}
 

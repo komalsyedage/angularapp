@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -9,7 +10,9 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private _route: Router) { }//for checkuser
+  constructor(private _route: Router, private _authservice: AuthService) {
+
+   }//for checkuser
 
   ngOnInit() {
   }
@@ -30,10 +33,17 @@ registerSubmit(){
 }
 checkUser(firstname,lastname,email,
   mobile,gender,pwd,rwd){
-    if(firstname== 'admin' && pwd== 'admin')
-    {
-      this._route.navigate(['product/laptop']);
-    }
+  var output =  this._authservice.checkUserNameandPassword(firstname,pwd)
+  if(output == true){
+    window.alert('login Successfully')
+    this._route.navigate(['product'])
+  }else{
+    window.alert('Invalid firstname & password')
+  }
+    // if(firstname== 'admin' && pwd== 'admin')
+    // {
+    //   this._route.navigate(['product/laptop']);
+    // }
     
 
 }
