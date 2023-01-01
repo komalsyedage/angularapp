@@ -14,7 +14,7 @@ constructor(private _route: Router){
    if(localStorage.getItem('firstname') != null){
     return true;
    }else{
-    this._route.navigate(['login'])
+    this._route.navigate(['/login'])
     return false;
    }
    

@@ -68,6 +68,7 @@ import { ElectronicsModule } from './electronics/electronics.module';
 
 import { ElerasberyModule } from './models/elerasbery.module';
 import { AdduserComponent } from './adduser/adduser.component';
+import { RapidComponent } from './rapid/rapid.component';
 
 
 //import { CustdirDirective } from './custdir.directive';
@@ -130,6 +131,7 @@ import { AdduserComponent } from './adduser/adduser.component';
     DemopostComponent,
     PostdetailsComponent,
     AdduserComponent,
+    RapidComponent,
     
    // ElerasDirective,
    ],

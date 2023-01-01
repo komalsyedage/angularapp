@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { DemoService } from './services/demo.service';
+import { PostService } from './services/post.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,14 +10,19 @@ import { DemoService } from './services/demo.service';
 
 export class AppComponent {
 Data:any=[];
-constructor(private _demoService: DemoService){//instance provde angular
+constructor(private _demoService: DemoService,private _postservice: PostService){//instance provde angular
   //  this._demoService.getuserData().subscribe(data=>{
    
   //   this.userdata=data;
   //   console.log(data);
-    
+  
    }
-
+   DeletePost(){
+    this._postservice.deletePostById(1).subscribe(res=>{
+      console.log(res);
+      
+    })
+  }
 // get(){
 //   this._demoService.getuseData().subscribe(data=>{
 //     console.log(data);
