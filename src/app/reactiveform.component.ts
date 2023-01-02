@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
+import { FirebasePost } from './models/firebase';
+import { FirebaseService } from './services/firebase.service';
 
 
 @Component({
@@ -22,12 +24,19 @@ export class ReactiveformComponent implements OnInit {
     }
   ]
   myReactiveForm: FormGroup;
-  constructor() { 
+  firebasePost: FirebasePost;
+
+  constructor(private _firebaseservice: FirebaseService) { 
     this.createForm();
   }
 
   ngOnInit() {
-    
+    this._firebaseservice.getpostData().subscribe(res=> {
+      console.log('getpostData',res);
+      
+    })
+   // console.log(this.myReactiveForm['controls'].userDetails['controls'].username.value);
+
     // setTimeout(() => {
     //   this.myReactiveForm.setValue({
     //     'userDetails' : {
@@ -65,7 +74,22 @@ export class ReactiveformComponent implements OnInit {
   OnSubmit()
   {
     this.submitted = true;
-    console.log(this.myReactiveForm);
+   // console.log(this.myReactiveForm);
+   // console.log(this.firebasePost=this.myReactiveForm['controls'].userDetails['controls'].username.value);
+    
+        
+   this.firebasePost=new FirebasePost();
+   this.firebasePost.username = this.myReactiveForm['controls'].userDetails['controls'].username.value;
+   this.firebasePost.email = this.myReactiveForm['controls'].userDetails['controls'].email.value;
+   this.firebasePost.course = this.myReactiveForm['controls'].course.value;
+   this.firebasePost.gender = this.myReactiveForm['controls'].gender.value;
+  this.firebasePost.skills = this.myReactiveForm['controls'].skills.value
+//console.log('firebase post',this.firebasePost);
+
+   this._firebaseservice.createpostDataReactiveform(this.firebasePost).subscribe(res => {
+   // console.log('post from reactive form',res);
+    
+  })
     
   }
   OnAddSkills() {

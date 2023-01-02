@@ -1,5 +1,5 @@
-<div class="containar" style="background-color: rgb(215, 181, 247);">
-  <h5 style="text-align: center;">  BB FINANCE API DATA </h5>
+<div class="containar">
+  <h5 style="text-align: center;">  BB FINANCE API Documentation </h5>
   <h6 style="text-align: center;">  NEWS </h6>
   <div class="row  justify containt center">
 
@@ -231,3 +231,53 @@
  </div>
   </div>
 </div>
+<div class="containar">
+  <h5 style="text-align: center;">  BB FINANCE API  Documentation </h5>
+  <h6 style="text-align: center;"> Quotes </h6>
+  <div class="row  justify containt center">
+
+    <div class="col-md-12" py-6>
+      <table class="table">
+        <thead>
+          <tr>
+
+            <th>card</th>
+            <th>Cuntry</th>
+            <th>Currency</th>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Region</th>
+            <th>ResourseID</th>
+            <th>Resourcesubtype</th>
+            <th>Ressource Type</th>
+            <th>Security Type</th>
+            <th>Symbol</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data1 of new2">
+            <td> {{data1.card}} </td>
+            <td> {{data1.country}} </td>
+            <td> {{data1.currency}} </td>
+            <td> {{data1.id}} </td>
+            <td> {{data1.name}} </td>
+            <td> {{data1.region}} </td>
+            <td> {{data1.resourceId}} </td>
+        
+            <td> {{data1.resourceSubtype}} </td>
+            <td> {{data1.resourceType}} </td>
+        
+            <td> {{data1.securityType}} </td>
+        
+            <td> {{data1.symbol}} </td>
+        
+        
+        
+          </tr>
+        </tbody>
+        </table>
+    </div>
+</div>
+</div>
+
+<button class="btn btn-primary" (click)="createPost()">Create Post</button>
