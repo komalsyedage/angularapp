@@ -69,6 +69,8 @@ import { ElectronicsModule } from './electronics/electronics.module';
 import { ElerasberyModule } from './models/elerasbery.module';
 import { AdduserComponent } from './adduser/adduser.component';
 import { RapidComponent } from './rapid/rapid.component';
+import { CandeactivateService } from './services/candeactivate.service';
+//import { UnsavedChangesGuard } from './unsaved-changes.guard';
 
 
 //import { CustdirDirective } from './custdir.directive';
@@ -155,7 +157,7 @@ import { RapidComponent } from './rapid/rapid.component';
   //form control for two way databinding form
    
   ],
-  providers: [],
+  providers:  [],//UnsavedChangesGuard
   bootstrap: [AppComponent]
 })
 export class AppModule { 

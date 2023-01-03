@@ -71,7 +71,7 @@ export class ReactiveformComponent implements OnInit {
         email: ['', Validators.required]
       }),
       course: ['Angular'],
-      gender: ['Male'],
+      gender: ['Female'],
       age:['',Validators.required],
       skills: this._fb.array([])
     })

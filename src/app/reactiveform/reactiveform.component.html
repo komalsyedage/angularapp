@@ -17,8 +17,7 @@
                     <label for="email">Email address</label>
                     <input type="text"  id="email" class="form-control" formControlName="email" placeholder="Enter email" >
                  <small class="text-danger" *ngIf="!myReactiveForm.get('userDetails.email').valid && myReactiveForm.get('userDetails.email').touched">
-                    <small *ngIf="myReactiveForm.get('userDetails.username').errors['required']">  Please enter valid email</small> 
-                   <small *ngIf="myReactiveForm.get('userDetails.username').errors['emailNotAllowed']">
+        <small *ngIf="myReactiveForm.get('userDetails.username').errors['required']">  Please enter Email</small>             <small *ngIf="myReactiveForm.get('userDetails.username').errors['emailNotAllowed']">
                     Email not allowed{{myReactiveForm.get('userDetails.email').value}}</small>
                  </small>
                 </div>

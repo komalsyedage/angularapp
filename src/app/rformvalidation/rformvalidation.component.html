@@ -8,7 +8,7 @@
     <div class="col mb-3">
       <label for="firstname" class="form-label">First name :</label>
       <input type="text" class="form-control" id="firstname" formControlName="firstname" required
-        placeholder="Enter first Nmae"  minlength="4" maxlength="10">
+        placeholder="Enter first Name" minlength="4" maxlength="10">
 
       <small *ngIf="Firstname.errors?.required &&  Firstname.touched">
         First Name is Required...</small>
@@ -99,6 +99,7 @@
     </div>
   </div>
 </form>
+<router-outlet></router-outlet>
 <!--<form class="border  border-dark p-3" [formGroup]="registerform" (ngSubmit)="registerSubmitted()">
 <div class="col mb-3">
   <label for="lastname" class="form-label">Last name :</label>

@@ -3,19 +3,26 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Emp } from '../models/emp';
 import { Employee } from '../models/employee';
+import { CandeactivateService, IDeactivecomponent } from '../services/candeactivate.service';
 
 @Component({
   selector: 'app-rformvalidation',
   templateUrl: './rformvalidation.component.html',
   styleUrls: ['./rformvalidation.component.css']
 })
-export class RFormvalidationComponent implements OnInit {
+export class RFormvalidationComponent implements OnInit,IDeactivecomponent {
 
   employee: any;
   submitted: boolean = false;
- 
-
-  constructor() { 
+  firstname;
+  lastname;
+  email;
+  mobile;
+  city;
+  gender;
+  pwd;
+  cwd;
+  constructor(private _comp: CandeactivateService) { 
     
   }
 
@@ -24,7 +31,7 @@ ngOnInit(){
   }
  registerform= new FormGroup({
 
-  firstname: new FormControl('', [Validators.required,Validators.minLength(4),Validators.maxLength(5),
+  firstname: new FormControl('', [Validators.required,Validators.minLength(3),Validators.maxLength(7),
     Validators.pattern("[a-zA-Z].*")]),
    lastname: new FormControl('', [Validators.required, Validators.minLength(4),Validators.maxLength(5)]),
       email: new FormControl('',[Validators.required,Validators.email]),
@@ -44,6 +51,15 @@ ngOnInit(){
   {
    
     
+  }
+
+  canExit(){
+    if(this.registerform.dirty){//this.firstname || this.lastname || this.email || this.mobile || this.city
+     // || this.gender || this.pwd || this.cwd
+      return  confirm('You have unsaved changes.Do you want to discard these changes?');
+      }else{
+        return true;
+      }
   }
   get Firstname(){
     return this.registerform.get('firstname') as FormControl;
@@ -69,6 +85,7 @@ ngOnInit(){
   get Cwds(){
     return this.registerform.get('cwd') as FormControl;
   }
+  
   }
 
   
