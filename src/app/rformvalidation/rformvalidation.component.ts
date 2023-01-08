@@ -14,14 +14,7 @@ export class RFormvalidationComponent implements OnInit,IDeactivecomponent {
 
   employee: any;
   submitted: boolean = false;
-  firstname;
-  lastname;
-  email;
-  mobile;
-  city;
-  gender;
-  pwd;
-  cwd;
+  
   constructor(private _comp: CandeactivateService) { 
     
   }

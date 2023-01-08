@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormControl, FormGroup, Validators ,FormBuilder} from '@angular/forms';
-import { Observable } from 'rxjs';
+import { from, interval, Observable } from 'rxjs';
 import { FirebasePost } from '../models/firebase';
 import { FirebaseService } from '../services/firebase.service';
-
+import{filter, map, take, takeLast, toArray}from 'rxjs/operators'
 
 @Component({
   selector: 'app-reactiveform',
@@ -30,6 +30,58 @@ export class ReactiveformComponent implements OnInit {
   }
 
   ngOnInit() {
+    // const data=from(this._firebaseservice.users) ;//make custome observable
+    // // observable method pipe combine multple operator
+    // data.pipe(
+    //   filter(u=>u.gender=='Male'),
+    //   toArray()//RXJs operator
+    // ).subscribe(res=>{
+    //   console.log('Filter Operaor',res);
+      
+    // })
+//take operator
+// const source= interval(10);
+// source.pipe(take(5)).subscribe(res =>{
+//   console.log('interval example',res);}
+//   )
+//take last
+let random=["codemind","Technology","Angular","HTML"];
+const source= from(random);
+source.pipe(takeLast(2)).subscribe(res =>{
+  console.log('Take Last Operator',res);
+  
+})
+
+    // data.pipe(
+    //   map(x => x.name + 'data')
+    // ).subscribe(res => {
+    //   console.log('res',res);
+      
+    // })
+    // this._firebaseservice.getpostData().pipe(
+    //   map(responseData=>{
+    //     //empty array
+    //     const postaray=[];
+    //     //for in loop
+    //     for(const key in responseData){
+    //       if(responseData.hasOwnProperty(key)){
+    //         //push new value into array
+    //         postaray.push({...responseData[key],id:key})
+    //       }
+
+    //     }
+    //     return postaray;
+    //   })
+    // ).subscribe(res => {
+    //   console.log('After manupulate Data',res);
+      
+    // }
+   //   )
+    // data.subscribe(res=> {
+
+    //   console.log('Example of from Operattor==>',res.name);
+    // })
+    
     
     // setTimeout(() => {
     //   this.myReactiveForm.setValue({

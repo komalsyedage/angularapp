@@ -6,7 +6,11 @@ import { FirebasePost } from '../models/firebase';
   providedIn: 'root'
 })
 export class FirebaseService {
-
+users:any[]=[
+  {id:'1',name:'Jack',gender:'Male'},
+  {id:'2',name:'John',gender:'Male'},
+  {id:'3',name:'Lili',gender:'FeMale'}
+]
   constructor(private _httpclient:HttpClient) { }
 url ='https://angular-crud-39714-default-rtdb.firebaseio.com/';
 
