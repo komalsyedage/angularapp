@@ -1,0 +1,22 @@
+<p>jsondata works!</p>
+<table>
+    <thead>
+        <tr>
+            <th>PostID</th>
+            <th>ID</th>
+            <th>Name</th>  
+            <th>Email</th>
+            <th>Body</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let d of data">
+            <td>{{d.postId}}</td>
+            <td>{{d.id}}</td>
+            <td>{{d.name}}</td>
+            <td>{{d.email}}</td>
+            <td>{{d.body}}</td>
+        </tr>
+    </tbody>
+</table>

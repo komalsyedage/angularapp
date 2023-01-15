@@ -149,6 +149,12 @@ source.pipe(takeLast(2)).subscribe(res =>{
    })
     
   }
+  getDataFromFirebase(){
+    this._firebaseservice.getpostData().subscribe(res=>{
+      console.log('get from firebase',res);
+      
+    })
+  }
   
   NaNames(control:FormControl)
   {  

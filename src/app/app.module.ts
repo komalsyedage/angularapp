@@ -70,6 +70,7 @@ import { ElerasberyModule } from './models/elerasbery.module';
 import { AdduserComponent } from './adduser/adduser.component';
 import { RapidComponent } from './rapid/rapid.component';
 import { CandeactivateService } from './services/candeactivate.service';
+import { JsondataComponent } from './jsondata/jsondata.component';
 //import { UnsavedChangesGuard } from './unsaved-changes.guard';
 
 
@@ -134,7 +135,8 @@ import { CandeactivateService } from './services/candeactivate.service';
     PostdetailsComponent,
     AdduserComponent,
     RapidComponent,
-    
+    JsondataComponent,
+    //ReactiveformComponent
    // ElerasDirective,
    ],
   

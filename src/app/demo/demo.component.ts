@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-demo',
@@ -8,7 +8,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 export class DemoComponent implements OnInit {
 //@Input() employeename:any;
 //@Input() bank:any;
-
+@Input() message:any;
 @Output() newItemEvent=new EventEmitter<string>();
   constructor() { }
 

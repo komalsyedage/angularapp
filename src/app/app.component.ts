@@ -10,6 +10,7 @@ import { PostService } from './services/post.service';
 
 export class AppComponent {
 Data:any=[];
+data:string='I Love JS'
 constructor(private _demoService: DemoService,private _postservice: PostService){//instance provde angular
   //  this._demoService.getuserData().subscribe(data=>{
    

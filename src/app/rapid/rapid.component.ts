@@ -24,18 +24,14 @@ export class RapidComponent implements OnInit {
     console.log('news',this.new1);
     //for quotes
     this.new2=this.res.quote;
-console.log('quotes', this.new2);
+  console.log('quotes', this.new2);
 
-    
     })
   }
   //firebase
   createPost(){
     this._firabaseService.createPost().subscribe(res =>{
       console.log('firebase post',res);
-      
-    })
-    
-  }
-
+      })
+     }
 }
